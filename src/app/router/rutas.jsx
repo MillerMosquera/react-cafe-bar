@@ -13,11 +13,11 @@ function rutas() {
       <Header/>
       <Switch>
         <Route exact path="/" component={Inicio} />
-        <Route path="/Nosotros" component={Nosotros} />
-        <Route path="/Menu" component={Menu} />
-        <Route path="/Servicios" component={Servicios} />
-        <Route path="/Contacto" component={Contacto} />
-        <Route path="/Carrito" component={Carrito} />
+        <Route path="/nosotros" component={Nosotros} />
+        <Route path="/menu" component={Menu} />
+        <Route path="/servicios" component={Servicios} />
+        <Route path="/contacto" component={Contacto} />
+        <Route path="/carrito" component={Carrito} />
       </Switch>
     </Router>
   );
