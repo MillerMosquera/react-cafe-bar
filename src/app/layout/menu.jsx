@@ -1,10 +1,11 @@
-
+import Menucontainer from "../components/menu/menucontainer";
+import '../components/menu/menu.css'
 
 function menu() {
   return (
-    <div>
-      <h1>Menú</h1>
-    </div>
+    <main>
+      <Menucontainer/>
+    </main>
   );
 }
 
