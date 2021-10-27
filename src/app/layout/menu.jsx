@@ -3,9 +3,9 @@ import '../components/menu/menu.css'
 
 function menu() {
   return (
-    <main>
+    <div>
       <Menucontainer/>
-    </main>
+    </div>
   );
 }
 

@@ -79,7 +79,7 @@ function usePagination() {
   };
 
   return (
-    <section>
+    <section className="section">
       <label className="text-menu">Menú</label>
       <Button/>
       <div className="platos-menu">{data}</div>

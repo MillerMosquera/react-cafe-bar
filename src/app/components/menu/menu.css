@@ -6,9 +6,9 @@ a {
 .text-menu{
   display:flex;
   color:#fff;
-  font-size:2.7rem;
+  font-size:2.3rem;
   margin-right: auto;
-  margin-left: 16%;
+  margin-left: 16.5%;
 }
 
 
@@ -16,7 +16,7 @@ a {
   display:flex;
   margin-left:auto;
   margin-right:20%;
-  margin-top:-2%;
+  margin-top:-2.5%;
   background-color: #ffff;
   color: #000;
   border-color: #000;
