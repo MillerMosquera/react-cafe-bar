@@ -27,7 +27,7 @@ function usePagination() {
         <div className="container">
           <div className="menu-container">
             <div className="menu-item filter-starters">
-              <img src={pd.imgSrc} className="menu-img" alt=""/>
+              <img src={pd.imgSrc} className="menu-img" alt="" />
               <div className="menu-content">
                 <label className="nombre">{pd.title}</label>
                 <span className="precio">{pd.precio}</span>
@@ -56,6 +56,7 @@ function usePagination() {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line
   }, [offset]);
 
   //Mensaje de confirmacion
@@ -81,7 +82,7 @@ function usePagination() {
   return (
     <section className="section">
       <label className="text-menu">Menú</label>
-      <Button/>
+      <Button />
       <div className="platos-menu">{data}</div>
       <div>
         <ReactPaginate

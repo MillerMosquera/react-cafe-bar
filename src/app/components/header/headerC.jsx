@@ -1,39 +1,69 @@
+import "./header.css";
 import { Navbar, Nav } from "react-bootstrap";
+import "bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { Link } from "react-router-dom";
 
 export default function header() {
   return (
     <>
-      <Navbar
-        bg="light"
-        expand="lg"
-        className="fixed-top d-flex align-items-center"
-        id="header">
-        <Navbar.Brand>
-          <Link className="logo me-auto me-lg-0" to="/">El Cafecito</Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse className="navbar" id="navbarScroll">
-          <Nav className="mr-auto my-2 my-lg-0">
-            <Link as={Link} to="/">
-              Inicio
-            </Link>
-            <Link as={Link} to="/nosotros">
-              Nosotros
-            </Link>
-            <Link as={Link} to="/menu">
-              Menú
-            </Link>
-            <Link as={Link} to="/servicios">
-              Servicios
-            </Link>
-            <Link as={Link} to="/contacto">
-              Contacto
-            </Link>
-            <Link as={Link} to="/carrito"></Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <div className="navbar">
+        <Navbar
+          collapseOnSelect
+          expand="lg"
+          className="fixed-top d-flex align-items-center "
+          bg="dark"
+          variant="dark">
+
+          <Navbar.Brand>
+            <Link to="/"> <h1 className="logo me-auto me-lg-0">El cafecito</h1></Link>
+
+
+          </Navbar.Brand>
+
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto " >
+
+
+              <Nav.Link as={Link} to="/">
+                <div className="item">
+                  Inicio
+                </div>
+              </Nav.Link>
+              <Nav.Link as={Link} to="/nosotros">
+                <div className="item">
+                  Nosotros
+                </div>
+              </Nav.Link>
+              <Nav.Link as={Link} to="/menu">
+                <div className="item">
+                  Menú
+                </div>
+              </Nav.Link>
+              <Nav.Link as={Link} to="/servicios">
+                <div className="item">
+                  Servicios
+                </div>
+              </Nav.Link>
+              <Nav.Link as={Link} to="/contacto">
+                <div className="item">
+                  Contacto
+                </div>
+              </Nav.Link>
+
+              <Nav.Link as={Link} to="/carrito">
+                <div className="carrito-btn">
+                  <i className="bi bi-cart"></i>
+                </div>
+              </Nav.Link>
+            </Nav>
+
+          </Navbar.Collapse>
+
+        </Navbar>
+      </div>
     </>
   );
 }

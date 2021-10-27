@@ -1,9 +1,9 @@
 import "./contactenos.css"
-import "./Boton.css"
+import "./boton.css"
 import reserved from "./reserved.png";
-import Reserva from "../reserva/Reserva";
+import { Link } from "react-router-dom";
 
-export default function ContactoC() {
+export default function contactoC() {
   return (
     <>
       <section id="contact" className="contact">
@@ -103,13 +103,15 @@ export default function ContactoC() {
           </div>
 
         </div>
+
+      <div className="container-boton">
+        <Link to="/reserva">
+          <img className="boton" src={reserved} alt="" />
+        </Link>
+      </div>
+
       </section>
 
-      <div class="container-boton">
-        <a href="">
-            <img className="boton" src={reserved}alt=""/>
-        </a>
-    </div>
     </>
   );
 }

@@ -1,0 +1,77 @@
+h1 {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+    margin: 0;
+    padding: 0px 180px 0px 10px;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    padding: auto;
+}
+
+.navbar .item {
+    position: relative;
+}
+
+.navbar .item,
+.navbar .item:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px 10px 30px;
+    color: #fff;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+
+.navbar .item:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar .item:hover {
+    color: #d9ba85;
+}
+
+.carrito-btn {
+    background-color: rgb(27, 27, 27);
+    width: 80px;
+    margin: 0 0 0 15px;
+    border: 2px solid #cda45e;
+    color: #fff;
+    border-radius: 50px;
+    padding: 8px 25px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    margin-left: 50px;
+}
+
+.carrito-btn:hover {
+    background: #cda45e;
+    color: #fff;
+}
+
+@media (max-width: 1040px) {
+    .carrito-btn {
+        margin: 0 15px 0 0;
+        padding: 8px 20px;
+        text-align: center;
+        margin-left: 80%;
+    }
+    .navbar {
+        padding: 20px 20px 20px 10px;
+    }
+    h1 {
+        padding: 0px 0px 0px 10px;
+    }
+}

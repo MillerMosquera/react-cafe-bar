@@ -5,6 +5,8 @@ import Menu from "../layout/menu";
 import Servicios from "../layout/servicios";
 import Contacto from "../layout/contacto";
 import Carrito from "../layout/carrito";
+import Reserva from "../layout/reserva";
+
 import Header from "../components/header/headerC";
 import Footer from "../components/footer/footerC";
 
@@ -19,6 +21,7 @@ function rutas() {
         <Route path="/servicios" component={Servicios} />
         <Route path="/contacto" component={Contacto} />
         <Route path="/carrito" component={Carrito} />
+        <Route path="/reserva" component={Reserva} />
       </Switch>
       <Footer/>
     </Router>
