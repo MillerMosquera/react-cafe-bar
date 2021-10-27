@@ -1,4 +1,7 @@
 import "./contactenos.css"
+import "./Boton.css"
+import reserved from "./reserved.png";
+import Reserva from "../reserva/Reserva";
 
 export default function ContactoC() {
   return (
@@ -101,6 +104,12 @@ export default function ContactoC() {
 
         </div>
       </section>
+
+      <div class="container-boton">
+        <a href="">
+            <img className="boton" src={reserved}alt=""/>
+        </a>
+    </div>
     </>
   );
 }
