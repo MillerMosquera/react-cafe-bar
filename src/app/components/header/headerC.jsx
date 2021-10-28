@@ -16,15 +16,12 @@ export default function header() {
           variant="dark">
 
           <Navbar.Brand>
-            <Link to="/"> <h1 className="logo me-auto me-lg-0">El cafecito</h1></Link>
-
-
-          </Navbar.Brand>
+            <Link to="/"> <h1 className="logo me-auto me-lg-0 titulo">El cafecito</h1></Link>          </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto " >
+          <Navbar.Collapse id="responsive-navbar-nav ">
+            <Nav className="me-auto items" >
 
 
               <Nav.Link as={Link} to="/">

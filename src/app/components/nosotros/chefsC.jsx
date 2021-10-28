@@ -18,7 +18,7 @@ export default function ChefsC() {
                     </div>
                     <Carousel>
                         <Carousel.Item>
-                        <div className="col chef-item">
+                            <div className="col chef-item">
                                 <div className="member">
                                     <img src={chef1} className="img-fluid" alt="" />
                                     <div className="member-info">
@@ -42,7 +42,7 @@ export default function ChefsC() {
                         </Carousel.Item>
 
                         <Carousel.Item>
-                        <div className="col chef-item">
+                            <div className="col chef-item">
                                 <div className="member">
                                     <img src={chef2} className="img-fluid" alt="" />
                                     <div className="member-info">
@@ -60,7 +60,7 @@ export default function ChefsC() {
                         </Carousel.Item>
 
                         <Carousel.Item>
-                        <div className="col chef-item">
+                            <div className="col chef-item">
                                 <div className="member">
                                     <img src={chef3} className="img-fluid" alt="" />
                                     <div className="member-info">

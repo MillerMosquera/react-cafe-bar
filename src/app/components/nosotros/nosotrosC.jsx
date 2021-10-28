@@ -1,7 +1,7 @@
 export default function NosotrosC() {
     return (
         <div>
-            <section id="why-us" className="why-us">
+            <section id="why-us" className="why-us section-bg2">
                 <div className="container">
 
                     <div className="section-title">

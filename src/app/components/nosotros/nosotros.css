@@ -339,7 +339,7 @@ p {
 }
 
 .chefs .member .social i {
-  font-size: 18px;
+  font-size: 20px;
   margin: 0 2px;
 }
 
@@ -365,10 +365,117 @@ p {
 }
 
 .chef-item {
-  margin-left: 25%;
-  margin-right: 25%;
-
+  margin-left: 35%;
+  margin-right: 35%;
   padding-bottom: 35px;
+}
+
+@media (max-width: 2000px) {
+  .chef-item {
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-bottom: 45px;
+  }
+  .chefs .member .social i {
+    font-size: 20px;
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .chef-item {
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-bottom: 45px;
+  }
+  .chefs .member .social i {
+    font-size: 20px;
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .chef-item {
+    margin-left: 32%;
+    margin-right: 32%;
+    padding-bottom: 35px;
+  }
+  .chefs .member .social i {
+    font-size: 20px;
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 992px) {
+  .chef-item {
+    margin-left: 27%;
+    margin-right: 27%;
+    padding-bottom: 35px;
+  }
+  .chefs .member .social i {
+    font-size: 12px;
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 750px) {
+  .chef-item {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom: 45px;
+  }
+  .chef-item .member .social i {
+    font-size: 18px;
+    margin: 0 2px;
+  }
+
+  .chef-item .member .member-info-content h4 {
+    font-size: 16px;
+  }
+  
+  .chef-item .member .member-info-content span {
+    font-size: 13px;
+  }
+} 
+
+@media (max-width: 600px) {
+  .chef-item {
+    margin-left: 12%;
+    margin-right: 12%;
+    padding-bottom: 45px;
+  }
+  .chef-item .member .social i {
+    font-size: 18px;
+    margin: 0 2px;
+  }
+
+  .chef-item .member .member-info-content h4 {
+    font-size: 16px;
+  }
+  
+  .chef-item .member .member-info-content span {
+    font-size: 13px;
+  }
+} 
+
+@media (max-width: 450px) {
+  .chef-item {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 45px;
+  }
+  .chef-item .member .social i {
+    font-size: 15px;
+    margin: 0 2px;
+  }
+
+  .chef-item .member .member-info-content h4 {
+    font-size: 14px;
+  }
+
+  .chef-item .member .member-info-content span {
+    font-size: 12px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -418,4 +525,12 @@ p {
 .slider {
   margin-left: 12%;
   padding-bottom: 5%;
+}
+
+@media (max-width: 992px) {
+  .slider {
+    margin-left: 12%;
+    margin-right: 12%;
+    padding-bottom: 5%;
+  }
 }
