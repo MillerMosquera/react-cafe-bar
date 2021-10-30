@@ -1,10 +1,20 @@
-import InicioC from "../components/inicio/inicioC";
+import SliderC from '../components/inicio/sliderC';
+import AcercadeC from '../components/inicio/acercadeC';
+import EspecialesC from '../components/inicio/especialesC';
+import EventosC from '../components/inicio/eventosC';
+import TestimoniosC from '../components/nosotros/testimoniosC';
+import "../components/inicio/inicio.css"
+import "../components/nosotros/nosotros.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function inicio() {
   return (
     <div>
-      <InicioC />
+      <SliderC/>
+      <AcercadeC/>
+      <EspecialesC/>
+      <EventosC />
+      <TestimoniosC />
     </div>
   );
 }

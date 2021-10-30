@@ -1,9 +1,11 @@
+import ServiciosC from "../components/servicios/serviciosC";
+import "../components/inicio/inicio.css"
+import "../components/nosotros/nosotros.css"
+import "../components/servicios/servicios.css"
 
 function servicios() {
   return (
-    <div>
-      <h1>Servicios</h1>
-    </div>
+    <ServiciosC></ServiciosC>
   );
 }
 
