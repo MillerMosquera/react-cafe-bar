@@ -1,13 +1,10 @@
+import CarritoC from "../components/carrito/carritoC";
 
 
 function carrito() {
     return (
-        <div>
-            <h1>
-                Carrito
-            </h1>
-        </div>
-    )
-}
+        <CarritoC></CarritoC>
+    );
+    }
 
 export default carrito;
