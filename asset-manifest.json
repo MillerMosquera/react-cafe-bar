@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/react-cafe-bar/static/css/main.b9079400.chunk.css",
-    "main.js": "/react-cafe-bar/static/js/main.98700c6a.chunk.js",
-    "main.js.map": "/react-cafe-bar/static/js/main.98700c6a.chunk.js.map",
-    "runtime-main.js": "/react-cafe-bar/static/js/runtime-main.5103e2af.js",
-    "runtime-main.js.map": "/react-cafe-bar/static/js/runtime-main.5103e2af.js.map",
+    "main.js": "/react-cafe-bar/static/js/main.b525f0e4.chunk.js",
+    "main.js.map": "/react-cafe-bar/static/js/main.b525f0e4.chunk.js.map",
+    "runtime-main.js": "/react-cafe-bar/static/js/runtime-main.ca69915f.js",
+    "runtime-main.js.map": "/react-cafe-bar/static/js/runtime-main.ca69915f.js.map",
     "static/css/2.d46b5e57.chunk.css": "/react-cafe-bar/static/css/2.d46b5e57.chunk.css",
-    "static/js/2.2f26545e.chunk.js": "/react-cafe-bar/static/js/2.2f26545e.chunk.js",
-    "static/js/2.2f26545e.chunk.js.map": "/react-cafe-bar/static/js/2.2f26545e.chunk.js.map",
-    "static/js/3.348d1ed9.chunk.js": "/react-cafe-bar/static/js/3.348d1ed9.chunk.js",
-    "static/js/3.348d1ed9.chunk.js.map": "/react-cafe-bar/static/js/3.348d1ed9.chunk.js.map",
-    "static/js/4.0c977fcd.chunk.js": "/react-cafe-bar/static/js/4.0c977fcd.chunk.js",
-    "static/js/4.0c977fcd.chunk.js.map": "/react-cafe-bar/static/js/4.0c977fcd.chunk.js.map",
+    "static/js/2.33739fa4.chunk.js": "/react-cafe-bar/static/js/2.33739fa4.chunk.js",
+    "static/js/2.33739fa4.chunk.js.map": "/react-cafe-bar/static/js/2.33739fa4.chunk.js.map",
+    "static/js/3.079c70ad.chunk.js": "/react-cafe-bar/static/js/3.079c70ad.chunk.js",
+    "static/js/3.079c70ad.chunk.js.map": "/react-cafe-bar/static/js/3.079c70ad.chunk.js.map",
+    "static/js/4.d71e0b19.chunk.js": "/react-cafe-bar/static/js/4.d71e0b19.chunk.js",
+    "static/js/4.d71e0b19.chunk.js.map": "/react-cafe-bar/static/js/4.d71e0b19.chunk.js.map",
     "index.html": "/react-cafe-bar/index.html",
     "static/css/2.d46b5e57.chunk.css.map": "/react-cafe-bar/static/css/2.d46b5e57.chunk.css.map",
     "static/css/main.b9079400.chunk.css.map": "/react-cafe-bar/static/css/main.b9079400.chunk.css.map",
-    "static/js/2.2f26545e.chunk.js.LICENSE.txt": "/react-cafe-bar/static/js/2.2f26545e.chunk.js.LICENSE.txt",
+    "static/js/2.33739fa4.chunk.js.LICENSE.txt": "/react-cafe-bar/static/js/2.33739fa4.chunk.js.LICENSE.txt",
     "static/media/bootstrap-icons.css": "/react-cafe-bar/static/media/bootstrap-icons.d0ec932c.woff2",
     "static/media/eden-grinshpan.1ac96765.jpg": "/react-cafe-bar/static/media/eden-grinshpan.1ac96765.jpg",
     "static/media/harry-sasson-1.d93c6bab.jpg": "/react-cafe-bar/static/media/harry-sasson-1.d93c6bab.jpg",
@@ -31,10 +31,10 @@
     "static/media/testimonio-5.91e205dc.jpg": "/react-cafe-bar/static/media/testimonio-5.91e205dc.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5103e2af.js",
+    "static/js/runtime-main.ca69915f.js",
     "static/css/2.d46b5e57.chunk.css",
-    "static/js/2.2f26545e.chunk.js",
+    "static/js/2.33739fa4.chunk.js",
     "static/css/main.b9079400.chunk.css",
-    "static/js/main.98700c6a.chunk.js"
+    "static/js/main.b525f0e4.chunk.js"
   ]
 }
