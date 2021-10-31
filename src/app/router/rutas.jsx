@@ -15,7 +15,7 @@ function rutas() {
     <Router>
       <Header/>
       <Switch>
-        <Route exact path="/" component={Inicio} />
+        <Route path="/" exact component={Inicio} />
         <Route path="/nosotros" component={Nosotros} />
         <Route path="/menu" component={Menu} />
         <Route path="/servicios" component={Servicios} />

@@ -56,7 +56,6 @@ function usePagination() {
 
   useEffect(() => {
     getData();
-    // eslint-disable-next-line
   }, [offset]);
 
   //Mensaje de confirmacion
