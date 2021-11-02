@@ -1,5 +1,4 @@
 import {useState, useEffect} from "react";
- //save data to localstorage
 
 const useLocalStorage = (defaultValue, key) => {
     const [value, setValue] = useState(() => {
