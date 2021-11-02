@@ -40,9 +40,7 @@ function usePagination() {
                     className="bi-cart add-to-cart-btn"
                     value={datos}
                     onClick={() => {
-                      setDatos([...datos, pd]);
-                      alertamsg()
-                    }}
+                      setDatos((e) => [...e, pd]);  alertamsg()}}
                   ></i>
                 </p>
               </div>
