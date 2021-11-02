@@ -12,7 +12,6 @@ const alertamsg = () => {
             toast.addEventListener("mouseleave", Swal.resumeTimer);
         },
     });
-
     Toast.fire({
         icon: "success",
         title: "Agregado al carrito",
