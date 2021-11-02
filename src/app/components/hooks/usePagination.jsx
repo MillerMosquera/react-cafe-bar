@@ -53,7 +53,6 @@ function usePagination() {
     setPageCount(Math.ceil(data.length / perPage));
   };
 
-  console.log(useLocalStorage)
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
     setOffset(selectedPage + 1);
