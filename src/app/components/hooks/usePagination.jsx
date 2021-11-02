@@ -4,8 +4,9 @@ import ReactPaginate from "react-paginate";
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../menu/menu.css";
-import Swal from "sweetalert2";
 import Button from '../menu/buttonPdf'
+import useLocalStorage from "../hooks/useLocalStorage";
+import alertamsg from '../menu/alert'
 
 function usePagination() {
   const [offset, setOffset] = useState(0);
@@ -13,8 +14,8 @@ function usePagination() {
   const [perPage] = useState(12);
   const [pageCount, setPageCount] = useState(0);
 
+  const [datos, setDatos] = useLocalStorage([], "datos");
 
-  //useLocalSotrage
 
   const getData = async () => {
     const res = await axios.get(
@@ -37,7 +38,11 @@ function usePagination() {
                   {pd.descripcion}
                   <i
                     className="bi-cart add-to-cart-btn"
-                    onClick={() => alertamsg()}
+                    value={datos}
+                    onClick={() => {
+                      setDatos([...datos, pd]);
+                      alertamsg()
+                    }}
                   ></i>
                 </p>
               </div>
@@ -49,6 +54,8 @@ function usePagination() {
     setData(postData);
     setPageCount(Math.ceil(data.length / perPage));
   };
+
+  console.log(useLocalStorage)
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
     setOffset(selectedPage + 1);
@@ -56,28 +63,7 @@ function usePagination() {
 
   useEffect(() => {
     getData();
-    // eslint-disable-next-line
   }, [offset]);
-
-  //Mensaje de confirmacion
-  const alertamsg = () => {
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener("mouseenter", Swal.stopTimer);
-        toast.addEventListener("mouseleave", Swal.resumeTimer);
-      },
-    });
-
-    Toast.fire({
-      icon: "success",
-      title: "Agregado al carrito",
-    });
-  };
 
   return (
     <section className="section">
