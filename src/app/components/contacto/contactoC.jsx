@@ -2,8 +2,12 @@ import "./contactenos.css"
 import "./boton.css"
 import reserved from "./reserved.png";
 import { Link } from "react-router-dom";
+import useLocalStorage from "../hooks/useLocalStorage";
 
-export default function contactoC() {
+export default function ContactoC() {
+
+  const [contacto, setContacto] = useLocalStorage("contacto", "form");
+
   return (
     <>
       <section id="contact" className="contact">
@@ -60,7 +64,10 @@ export default function contactoC() {
               <form action="" method="post" className="php-email-form">
                 <div className="row">
                   <div className="col-md-6 form-group">
-                    <input type="text" name="name" className="form-control" id="name" placeholder="Su nombre" required />
+                    <input type="text" name="name" className="form-control" id="name" placeholder="Su nombre" required
+                      value={contacto}
+                      onChange={(e) => setContacto(e.target.value)}
+                    />
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
                     <input type="email" className="form-control" name="email" id="email" placeholder="Su Email" required />
@@ -104,11 +111,11 @@ export default function contactoC() {
 
         </div>
 
-      <div className="container-boton">
-        <Link to="/reserva">
-          <img className="boton" src={reserved} alt="" />
-        </Link>
-      </div>
+        <div className="container-boton">
+          <Link to="/reserva">
+            <img className="boton" src={reserved} alt="" />
+          </Link>
+        </div>
 
       </section>
 

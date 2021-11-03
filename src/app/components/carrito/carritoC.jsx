@@ -1,5 +1,5 @@
 import 'bootstrap';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function carritoC() {
   return (
     <>
@@ -11,32 +11,34 @@ function carritoC() {
           </div>
         </div>
       </section>
-      
-        <div className="container">
-          <div className="row mt-3">
-            <div className="col">
-              <form id="procesar-pago">
-                <div id="carrito" className="form-group table-responsive">
-                  <table className="form-group table" id="lista-compra">
-                    <thead>
-                      <tr>
-                        <th scope="col">Imagen</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Sub Total</th>
-                        <th scope="col">Eliminar</th>
-                      </tr>
-                    </thead>
-                    <tbody>
+
+      <div className="container">
+        <div className="row mt-3">
+          <div className="col">
+            <form id="procesar-pago">
+              <div id="carrito" className="form-group table-responsive">
+                <table className="form-group table" id="lista-compra">
+                  <thead>
+                    <tr>
+                      <th scope="col">Imagen</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Precio</th>
+                      <th scope="col">Cantidad</th>
+                      <th scope="col">Sub Total</th>
+                      <th scope="col">Eliminar</th>
+                    </tr>
+                  </thead>
+                  <tbody>
                     <tr>
                       <th scope="col"></th>
                       <th scope="col"></th>
                       <th scope="col"></th>
                       <th scope="col"></th>
+                      {/* eslint-disable-next-line  */}
                       <th colSpan="4" scope="col" className="text-right ">
-                          {/*href="javascript:location.reload()"*/}
-                        <a className="btn btn-warning" >
+                        {/* href="javascript:location.reload()" */}
+                        <a className="btn btn-warning" href="/#"
+                        >
                           Calcular
                         </a>
                       </th>
@@ -67,37 +69,37 @@ function carritoC() {
                           name="monto"
                           className="font-weight-bold border-0"
                           readOnly
-                          
+
                         ></input>
                       </th>
                     </tr>
-                    </tbody>
-                  </table>
-                </div>
+                  </tbody>
+                </table>
+              </div>
 
-                <div className="row justify-content-between">
-                  <div className="col-md-4 mb-2">
-                    <Link as={Link} to="/menu" className="btn btn-info btn-block">
-                      Seguir comprando
-                    </Link>
-                  </div>
-                  <div className="col-xs-12 col-md-4">
-                    <a
-                      href="compra.html"
-                      type="submit"
-                      className="btn btn-success btn-block"
-                      id="procesar-compra"
-                      value="Realizar compra"
-                    >
-                      Realizar Compra
-                    </a>
-                  </div>
+              <div className="row justify-content-between">
+                <div className="col-md-4 mb-2">
+                  <Link as={Link} to="/menu" className="btn btn-info btn-block">
+                    Seguir comprando
+                  </Link>
                 </div>
-              </form>
-            </div>
+                <div className="col-xs-12 col-md-4">
+                  <a
+                    href="compra.html"
+                    type="submit"
+                    className="btn btn-success btn-block"
+                    id="procesar-compra"
+                    value="Realizar compra"
+                  >
+                    Realizar Compra
+                  </a>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-      
+      </div>
+
     </>
   );
 }

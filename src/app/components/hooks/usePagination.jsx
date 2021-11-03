@@ -40,7 +40,8 @@ function usePagination() {
                     className="bi-cart add-to-cart-btn"
                     value={datos}
                     onClick={() => {
-                      setDatos((e) => [...e, pd]);  alertamsg()}}
+                      setDatos((e) => [...e, pd]); alertamsg()
+                    }}
                   ></i>
                 </p>
               </div>
@@ -59,8 +60,11 @@ function usePagination() {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line
     getData();
+    // eslint-disable-next-line
   }, [offset]);
+
 
   return (
     <section className="section">
