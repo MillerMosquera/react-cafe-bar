@@ -1,10 +1,10 @@
 import Carousel from 'react-bootstrap/Carousel'
 
-import testimonio1 from "./img/testimonios/testimonio-1.jpg";
-import testimonio2 from "./img/testimonios/testimonio-2.jpg";
-import testimonio3 from "./img/testimonios/testimonio-3.jpg";
-import testimonio4 from "./img/testimonios/testimonio-4.jpg";
-import testimonio5 from "./img/testimonios/testimonio-5.jpg";
+import testimonio1 from "../img/testimonios/testimonio-1.jpg";
+import testimonio2 from "../img/testimonios/testimonio-2.jpg";
+import testimonio3 from "../img/testimonios/testimonio-3.jpg";
+import testimonio4 from "../img/testimonios/testimonio-4.jpg";
+import testimonio5 from "../img/testimonios/testimonio-5.jpg";
 
 export default function TestimoniosC() {
     return (

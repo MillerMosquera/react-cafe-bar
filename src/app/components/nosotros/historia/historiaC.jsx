@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Historia from "./components/historia";
+import Historia from "./historia";
 
 export default function HistoriaC() {
 
