@@ -1,5 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import "bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function acercadeC() {
     return (
@@ -19,9 +20,9 @@ function acercadeC() {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                             <ul>
-                                <li style={{ textAlign: 'left' }}><FontAwesomeIcon icon={faCheckCircle} style={{ fontSize: "1.5em", color: '#cda45e' }} /> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                                <li style={{ textAlign: 'left' }}><FontAwesomeIcon icon={faCheckCircle} style={{ fontSize: "1.5em", color: '#cda45e' }} /> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                                <li style={{ textAlign: 'left' }}><FontAwesomeIcon icon={faCheckCircle} style={{ fontSize: "1.5em", color: '#cda45e' }} /> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                                <li style={{ textAlign: 'left'}}><i className="bi bi-check-circle-fill" style={{ fontSize: "1.5em", color: '#cda45e'}}></i>  Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                <li style={{ textAlign: 'left'}}><i className="bi bi-check-circle-fill" style={{ fontSize: "1.5em", color: '#cda45e'}}></i>  Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                                <li style={{ textAlign: 'left'}}><i className="bi bi-check-circle-fill" style={{ fontSize: "1.5em", color: '#cda45e'}}></i>  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
                             </ul>
                             <p>
                                 Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
