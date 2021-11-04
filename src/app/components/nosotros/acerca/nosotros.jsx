@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Item from "./item";
 
 class Nosotros extends Component {
     render(props) {
@@ -17,17 +18,11 @@ class Nosotros extends Component {
                     <div className="row">
                         {this.props.items.map(item =>
                             <div key={item.id} className="col-lg-4 mt-4 mt-lg-0">
-                                <div className="box">
-                                    <span>{item.titulo}</span>
-                                    <br />
-                                    <p>
-                                        {item.contenido1}
-                                    </p>
-                                    <br />
-                                    <p>
-                                        {item.contenido2}
-                                    </p>
-                                </div>
+                                <Item
+                                    titulo={item.titulo}
+                                    contenido1={item.contenido1}
+                                    contenido2={item.contenido2}
+                                />
                             </div>
                         )}
                     </div>

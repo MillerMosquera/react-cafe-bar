@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
 import Carousel from 'react-bootstrap/Carousel'
+import ChefItem from "./chefItem";
 
-class Testimonios extends Component {
+class Chefs extends Component {
     render(props) {
 
         return (
@@ -17,29 +18,17 @@ class Testimonios extends Component {
 
                     <Carousel >
                         {this.props.chefs.map(chef =>
-                                <Carousel.Item >
-                                    <div className="col chef-item">
-                                        <div className="member">
-                                            <img src={chef.foto} className="img-fluid" alt="" />
-                                            <div className="member-info">
-                                                <div className="member-info-content">
-                                                    <h4>{chef.nombre}</h4>
-                                                    <span>{chef.cargo}</span>
-                                                </div>
-
-                                                <div className="social">
-                                                    <a target="_blank" rel="noopener noreferrer" href={chef.twitter}><i
-                                                        className="bi bi-twitter"></i></a>
-                                                    <a target="_blank" rel="noopener noreferrer" href={chef.facebook}><i className="bi bi-facebook"></i></a>
-                                                    <a target="_blank" rel="noopener noreferrer" href={chef.instagram}><i
-                                                        className="bi bi-instagram"></i></a>
-                                                    <a target="_blank" rel="noopener noreferrer" href={chef.youtube}><i
-                                                        className="bi bi-youtube"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Carousel.Item>
+                            <Carousel.Item key={chef.id}>
+                                <ChefItem
+                                    nombre={chef.nombre}
+                                    cargo={chef.cargo}
+                                    foto={chef.foto}
+                                    twitter={chef.twitter}
+                                    facebook={chef.facebook}
+                                    instagram={chef.instagram}
+                                    youtube={chef.youtube}
+                                />
+                            </Carousel.Item>
                         )}
 
 
@@ -51,4 +40,4 @@ class Testimonios extends Component {
     }
 }
 
-export default Testimonios;
+export default Chefs;
