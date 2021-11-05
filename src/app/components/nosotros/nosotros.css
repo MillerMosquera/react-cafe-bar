@@ -165,21 +165,21 @@ p {
   # Why Us
   --------------------------------------------------------------*/
 
-.why-us .box {
+.why-us .box-acerca {
   padding: 50px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
   background: #1a1814;
 }
 
-.why-us .box span {
+.why-us .box-acerca span {
   display: block;
   font-size: 28px;
   font-weight: 700;
   color: #cda45e;
 }
 
-.why-us .box h4 {
+.why-us .box-acerca h4 {
   font-size: 24px;
   font-weight: 600;
   padding: 0;
@@ -187,87 +187,87 @@ p {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.why-us .box p {
+.why-us .box-acerca p {
   color: #aaaaaa;
   font-size: 15px;
   margin: 0;
   padding: 0;
 }
 
-.why-us .box:hover {
+.why-us .box-acerca:hover {
   background: #cda45e;
   padding: 30px 30px 70px 30px;
-  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+  box-acerca-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
 
-.why-us .box:hover span,
-.why-us .box:hover h4,
-.why-us .box:hover p {
+.why-us .box-acerca:hover span,
+.why-us .box-acerca:hover h4,
+.why-us .box-acerca:hover p {
   color: #fff;
 }
 
 @media all and (min-width: 1400px) {
-  .box {
+  .box-acerca {
     height: 370px;
   }
 }
 
 @media all and (max-width: 1400px) {
-  .box {
+  .box-acerca {
     height: 430px;
   }
 }
 
 @media all and (max-width: 1200px) {
-  .box {
+  .box-acerca {
     height: 500px;
   }
 }
 
 @media all and (max-width: 1024px) {
-  .box {
+  .box-acerca {
     height: 510px;
   }
 }
 
 @media all and (max-width: 992px) {
-  .box {
+  .box-acerca {
     height: 300px;
   }
 }
 
 @media all and (max-width: 768px) {
-  .box {
+  .box-acerca {
     height: 350px;
   }
 }
 
 @media all and (max-width: 500px) {
-  .box {
+  .box-acerca {
     height: 380px;
   }
 }
 
 @media all and (max-width: 420px) {
-  .box {
+  .box-acerca {
     height: 450px;
   }
 }
 
 @media all and (max-width: 350px) {
-  .box {
+  .box-acerca {
     height: 500px;
   }
 }
 
 @media all and (max-width: 310px) {
-  .box {
+  .box-acerca {
     height: 550px;
   }
 }
 
 @media all and (max-width: 250px) {
-  .box {
+  .box-acerca {
     height: 750px;
   }
 }
@@ -523,13 +523,13 @@ p {
 
 .slider {
   margin-left: 13%;
-  padding-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 @media (max-width: 992px) {
   .slider {
     margin-left: 12%;
     margin-right: 12%;
-    padding-bottom: 5%;
+    margin-bottom: 10%;
   }
 }

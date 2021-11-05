@@ -5,7 +5,7 @@ class Item extends Component {
 
         return (
 
-            <div className="box">
+            <div className="box-acerca">
                 <span>{this.props.titulo}</span>
                 <br />
                 <p>
