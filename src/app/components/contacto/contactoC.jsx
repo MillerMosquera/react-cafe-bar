@@ -3,7 +3,10 @@ import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function ContactoC() {
 
-  const [contacto, setContacto] = useLocalStorage("contacto", "form");
+  const [nombre, setNombre] = useLocalStorage("", "nombre");
+  const [email, setEmail] = useLocalStorage("", "email");
+  const [servicio, setServicio] = useLocalStorage("", "servicio");
+  const [mensaje, setMensaje] = useLocalStorage("", "mensaje");
 
   return (
     <>
@@ -62,31 +65,37 @@ export default function ContactoC() {
                 <div className="row">
                   <div className="col-md-6 form-group">
                     <input type="text" name="name" className="form-control" id="name" placeholder="Su nombre" required
-                      value={contacto}
-                      onChange={(e) => setContacto(e.target.value)}
+                      value={nombre}
+                      onChange={(e) => setNombre(e.target.value)}
                     />
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" className="form-control" name="email" id="email" placeholder="Su Email" required />
+                    <input type="email" className="form-control" name="email" id="email" placeholder="Su Email" required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)} />
                   </div>
                 </div>
 
                 <div className="form-group mt-3">
 
-                  <select className="form-select form-select-sm contacto" aria-label=".form-select-sm example" required>
+                  <select className="form-select form-select-sm contacto" aria-label=".form-select-sm example" required
+                    value={servicio}
+                    onChange={(e) => setServicio(e.target.value)}>
                     <option defaultValue>Servicios</option>
-                    <option value="1">Cumpleaños</option>
-                    <option value="2">Aniversario</option>
-                    <option value="3">Fiesta Infantil</option>
-                    <option value="4">Declaraciones o Propuestas</option>
-                    <option value="5">Despedidasd</option>
-                    <option value="6">Cena Con Amigos</option>
+                    <option value="Cumpleaños">Cumpleaños</option>
+                    <option value="Aniversario">Aniversario</option>
+                    <option value="Fiesta Infantil">Fiesta Infantil</option>
+                    <option value="Declaraciones o Propuestas">Declaraciones o Propuestas</option>
+                    <option value="Despedida">Despedida</option>
+                    <option value="Cena con Amigos">Cena Con Amigos</option>
                   </select>
 
                 </div>
 
                 <div className="form-group mt-3">
-                  <textarea className="form-control" name="message" rows="8" placeholder="Mensaje" required></textarea>
+                  <textarea className="form-control" name="message" rows="8" placeholder="Mensaje" required
+                    value={mensaje}
+                    onChange={(e) => setMensaje(e.target.value)}></textarea>
                 </div>
 
                 <input type="checkbox" name="option" id="check1" required />
