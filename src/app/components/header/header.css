@@ -14,6 +14,11 @@
 
 .navbar {
   padding: auto;
+  background-color: rgba(12, 11, 9, 0.6);
+}
+
+.me-auto .items{
+  background-color: #cda45e;
 }
 
 .navbar .item {

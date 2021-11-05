@@ -12,7 +12,6 @@ export default function header() {
           collapseOnSelect
           expand="lg"
           className="fixed-top d-flex align-items-center "
-          bg="dark"
           variant="dark">
 
           <Navbar.Brand>
