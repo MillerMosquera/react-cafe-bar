@@ -1,225 +1,230 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box!important;
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
-    background: #0c0b09;
-    color: #fff;
+    font-family: "Open Sans", sans-serif!important;
+    background: #0c0b09!important;
+    color: #fff!important;
 }
 
 main {
-    max-width: 800px;
-    width: 90%;
-    margin: auto;
-    padding: 30px;
+    width: 100%!important;
+    max-width: 1000px!important;
+    margin: auto!important;
+    
 }
 
 .formulario {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: grid!important;
+    grid-template-columns: 1fr 1fr!important;
+    gap: 20px!important;
 }
 
 .formulario__label {
-    display: block;
-    font-weight: 700;
-    padding: 10px;
-    cursor: pointer;
+    display: block!important;
+    font-weight: 700px!important;
+    padding: 10px!important;
+    cursor: pointer!important;
 }
 
 .formulario__grupo-input {
-    position: relative;
+    position: relative!important;
 }
 
 .formulario__input {
-    width: 100%;
-    color: #bab3a6;
-    background-color: #0c0b09;
-    border: 1px solid #625b4b;
-    border-radius: 3px;
-    height: 45px;
-    line-height: 45px;
-    padding: 0 40px 0 10px;
-    transition: 0.1s ease all;
+    width: 100%!important;
+    max-width: 600px!important;
+    color: #fafafa!important;
+    background-color: #0c0b09!important;
+    border: 1px solid #625b4b!important;
+    border-radius: 3px!important;
+    height: 45px!important;
+    line-height: 45px!important;
+    padding: 0 40px 0 10px!important;
+    transition: 0.1s ease all!important;
 }
 
 .formulario__input:focus {
-    border: 3px solid #d9ba85;
-    outline: none;
-    box-shadow: 3px 0px 30px rgb(163, 163, 163, 0.4);
+    border: 3px solid #d9ba85!important;
+    outline: none!important;
+    box-shadow: 3px 0px 30px rgb(163, 163, 163, 0.4)!important;
 }
 
 .formulario__input-error {
-    font-size: 12px;
-    margin-bottom: 0;
-    display: none;
+    font-size: 12px!important;
+    margin-bottom: 0!important;
+    display: none!important;
 }
 
 .formulario__input-error2 {
-    font-size: 12px;
-    margin-bottom: 0;
-    display: none;
+    font-size: 12px!important;
+    margin-bottom: 0!important;
+    display: none!important;
 }
 
 .formulario__input-error-activo {
-    display: block;
+    display: block!important;
 }
 
 .formulario__select {
-    padding: 10px 12px;
-    color: #bab3a6;
-    background-color: #0c0b09;
-    border: 1px solid #625b4b;
+    width: 100%!important;
+    max-width: 600px!important;
+    padding: 10px 12px!important;
+    color: #bab3a6!important;
+    background-color: #0c0b09!important;
+    border: 1px solid #625b4b!important;
     background-image: linear-gradient(45deg, transparent 50%, rgb(186, 179, 166) 60%), linear-gradient(135deg, rgb(186, 179, 166) 40%, transparent 50%) !important;
-    background-position: calc(100% - 30px) 14px, calc(100% - 20px) 14px, 100% 0;
-    background-size: 10px 10px, 10px 10px;
-    background-repeat: no-repeat;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    background-position: calc(100% - 30px) 14px, calc(100% - 20px) 14px, 100% 0!important;
+    background-size: 10px 10px, 10px 10px!important;
+    background-repeat: no-repeat!important;
+    -webkit-appearance: none!important;
+    -moz-appearance: none !important;
 }
 
 .formulario__select:focus {
-    border: 3px solid #d9ba85;
-    outline: none;
-    box-shadow: 3px 0px 30px rgb(163, 163, 163, 0.4);
+    border: 3px solid #d9ba85!important;
+    outline: none!important;
+    box-shadow: 3px 0px 30px rgb(163, 163, 163, 0.4)!important;
 }
 
 .formulario__select-error {
-    border: red;
+    border: red!important;
 }
 
 .formulario__select-correcto {
-    border: green;
+    border: green!important;
 }
 
 .formulari___checkbox {
-    margin-right: 18px;
+    margin-right: 18px!important;
+    height: 10px!important;
 }
 
 textarea {
-    grid-template-columns: 1fr 1fr 1fr;
-    box-sizing: border-box;
-    font: 12px;
-    font-family: "Open Sans", sans-serif;
-    color: #bab3a6;
-    background-color: #0c0b09;
-    border: 1px solid #625b4b;
-    height: 100px;
-    margin: 5px 0 15px 0;
-    padding: 5px 2px;
-    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr!important;
+    box-sizing: border-box!important;
+    font: 12px!important;
+    font-family: "Open Sans", sans-serif!important;
+    color: #bab3a6!important;
+    background-color: #0c0b09!important;
+    border: 1px solid #625b4b!important;
+    height: 100px!important;
+    margin: 5px 0 15px 0!important;
+    padding: 5px 2px!important;
+    width: 100%!important;
+    max-width: 600px!important;
 }
 
 textarea:focus {
-    border: 3px solid #d9ba85;
-    outline: none;
-    box-shadow: 3px 0px 30px rgb(163, 163, 163, 0.4);
+    border: 3px solid #d9ba85!important;
+    outline: none!important;
+    box-shadow: 3px 0px 30px rgb(163, 163, 163, 0.4)!important;
 }
 
 .reserva-btn-enviar {
-    height: 55px;
-    background: #d9ba85;
-    font-weight: bold;
-    border: none;
-    border-bottom: #d9ba85;
-    border-radius: 5px;
-    color: #bab3a6;
-    background-color: #0c0b09;
-    border: 1px solid #625b4b;
-    cursor: pointer;
-    transition: 0.1s ease all;
+    height: 55px!important;
+    background: #d9ba85!important;
+    font-weight: bold!important;
+    border: none!important;
+    border-bottom: #d9ba85!important;
+    border-radius: 5px!important;
+    color: #bab3a6!important;
+    background-color: #0c0b09!important;
+    border: 1px solid #625b4b!important;
+    cursor: pointer!important;
+    transition: 0.1s ease all!important;
 }
 
 .reserva-btn-enviar:focus {
-    box-shadow: 3px 0px 30px rgb(163, 163, 163 1);
-    border: 3px solid #d9ba85;
-    outline: none;
-    box-shadow: 3px 0px 30px rgb(163, 163, 163, 0.4);
+    box-shadow: 3px 0px 30px rgb(163, 163, 163 1)!important;
+    border: 3px solid #d9ba85!important;
+    outline: none!important;
+    box-shadow: 3px 0px 30px rgb(163, 163, 163, 0.4)!important;
 }
 
 .reserva-btn-enviar:hover {
-    background: #d9ba85;
-    color: #0c0b09;
-    box-shadow: 3px 0px 30px rgb(163, 163, 163 1);
+    background: #d9ba85!important;
+    color: #0c0b09!important;
+    box-shadow: 3px 0px 30px rgb(163, 163, 163 1)!important;
 }
 
 .formulario__grupo-correcto .formulario__input {
-    border: 3px solid green;
+    border: 3px solid green!important;
 }
 
 .formulario__grupo-correcto .formulario__label {
-    color: green;
+    color: green!important;
 }
 
 .formulario__grupo-incorrecto .formulario__label {
-    color: red;
+    color: red!important;
 }
 
 .formulario__grupo-incorrecto .formulario__input {
-    border: 3px solid red;
+    border: 3px solid red!important;
 }
 
 .formulario__mensaje {
-    height: 45px;
-    line-height: 45px;
-    background: #f66860;
-    display: none;
+    height: 45px!important;
+    line-height: 45px!important;
+    background: #f66860!important;
+    display: none!important;
 }
 
 .formulario__mensaje-activo {
-    display: block;
+    display: block!important;
 }
 
 @media screen and (max-width: 800px) {
     main {
-        max-width: 800px;
-        width: 90%;
-        margin: auto;
-        padding: 30px;
+        max-width: 800px!important;
+        width: 90%!important;
+        margin: auto!important;
+        padding: 30px!important;
     }
     .formulario {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr!important;
     }
 }
 
 @media screen and (max-width: 768px) {
     main {
-        max-width: 750px;
-        width: 90%;
-        margin: auto;
-        padding: 25px;
+        max-width: 750px!important;
+        width: 90%!important;
+        margin: auto!important;
+        padding: 25px!important;
     }
     .formulario {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr!important;
     }
 }
 
 table {
-    width: 100%;
+    width: 100%!important;
 }
 
 .negrilla {
-    font-weight: bold;
-    color: #ff5252;
+    font-weight: bold!important;
+    color: #ff5252!important;
 }
 
 .confirmar-reserva {
-    margin-top: -150px;
+    margin-top: -150px!important;
 }
 
 
 /* Zebra striping */
 
 th {
-    background: #3498db;
-    color: white;
-    font-weight: bold;
+    background: #3498db!important;
+    color: white!important;
+    font-weight: bold!important;
 }
 
 td,
 th {
-    padding: 10px;
-    text-align: left;
-    font-size: 18px;
+    padding: 10px!important;
+    text-align: left!important;
+    font-size: 18px!important;
 }

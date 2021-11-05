@@ -1,5 +1,9 @@
 import 'bootstrap';
 
+import "./boton.css"
+import reserved from "./reserved.png";
+import { Link } from "react-router-dom";
+
 function serviciosC() {
   return (
     <>
@@ -118,6 +122,13 @@ function serviciosC() {
 
                 </div>
             </div>
+
+            <div className="container-boton">
+          <Link to="/reserva">
+            <img className="boton" src={reserved} alt="" />
+          </Link>
+        </div>
+        
             </section>
     </>
   );

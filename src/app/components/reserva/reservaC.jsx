@@ -5,6 +5,7 @@ export default function Reserva() {
     return (
         <>
 
+        <main>
             <section id="contact" className="contact">
                 <div className="container">
 
@@ -70,8 +71,6 @@ export default function Reserva() {
                             </select>
                         </div>
 
-                        <p className="formulario__select-error">Selecione un servicio </p>
-
                     </div>
 
                     <div className="formulario__grupo" id="grupo__personas">
@@ -126,7 +125,7 @@ export default function Reserva() {
                 </form>
 
             </section>
-
+            </main>
         </>
     );
 }

@@ -1,7 +1,4 @@
 import "./contactenos.css"
-import "./boton.css"
-import reserved from "./reserved.png";
-import { Link } from "react-router-dom";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function ContactoC() {
@@ -111,11 +108,6 @@ export default function ContactoC() {
 
         </div>
 
-        <div className="container-boton">
-          <Link to="/reserva">
-            <img className="boton" src={reserved} alt="" />
-          </Link>
-        </div>
 
       </section>
 
