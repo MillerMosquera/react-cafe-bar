@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Inicio from "../layout/inicio";
 import Nosotros from "../layout/nosotros";
 import Menu from "../layout/menu";
@@ -12,7 +12,7 @@ import Footer from "../components/footer/footerC";
 
 function rutas() {
   return (
-    <Router>
+    <HashRouter>
       <Header/>
       <Switch>
         <Route path="/" exact component={Inicio} />
@@ -24,7 +24,7 @@ function rutas() {
         <Route path="/reserva" component={Reserva} />
       </Switch>
       <Footer/>
-    </Router>
+    </HashRouter>
   );
 }
 
