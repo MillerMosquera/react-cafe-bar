@@ -16,6 +16,9 @@ function usePagination() {
 
   const [datos, setDatos] = useLocalStorage([], "datos");
 
+//function 
+  
+  
 
   const getData = async () => {
     const res = await axios.get(
@@ -31,7 +34,7 @@ function usePagination() {
               <img src={pd.imgSrc} className="menu-img" alt="" />
               <div className="menu-content">
                 <label className="nombre">{pd.title}</label>
-                <span className="precio">{pd.precio}</span>
+                <span className="precio">{pd.precio} $</span>
               </div>
               <div className="menu-ingredients">
                 <p className="descrip">
@@ -56,7 +59,7 @@ function usePagination() {
 
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
-    setOffset(selectedPage + 1);
+    setOffset(selectedPage * perPage);  
   };
 
   useEffect(() => {
@@ -68,8 +71,10 @@ function usePagination() {
 
   return (
     <section className="section">
-      <label className="text-menu">Menú</label>
-      <Button />
+      <div className="menu-button">
+        <label className="text-menu">Menú</label>
+        <Button />
+      </div>
       <div className="platos-menu">{data}</div>
       <div>
         <ReactPaginate
