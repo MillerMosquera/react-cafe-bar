@@ -6,6 +6,7 @@ import Servicios from "../layout/servicios";
 import Contacto from "../layout/contacto";
 import Carrito from "../layout/carrito";
 import Reserva from "../layout/reserva";
+import ConfirmarReserva from "../layout/confirmarReserva";
 
 import Header from "../components/header/headerC";
 import Footer from "../components/footer/footerC";
@@ -13,7 +14,7 @@ import Footer from "../components/footer/footerC";
 function rutas() {
   return (
     <HashRouter>
-      <Header/>
+      <Header />
       <Switch>
         <Route path="/" exact component={Inicio} />
         <Route path="/nosotros" component={Nosotros} />
@@ -22,8 +23,10 @@ function rutas() {
         <Route path="/contacto" component={Contacto} />
         <Route path="/carrito" component={Carrito} />
         <Route path="/reserva" component={Reserva} />
+        <Route path="/confirmar-reserva" component={ConfirmarReserva} />
+
       </Switch>
-      <Footer/>
+      <Footer />
     </HashRouter>
   );
 }
