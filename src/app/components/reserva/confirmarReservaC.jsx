@@ -120,7 +120,7 @@ function sendMail() {
         .then(function () {
 
             localStorage.clear();
-            window.location.replace("react-cafe-bar/#/servicios");
+            window.location.replace("#/servicios");
 
             Swal.fire({
                 title: 'Reserva realizada...',
