@@ -2,6 +2,8 @@ import React from "react";
 import "./reserva.css";
 import useLocalStorage from "../hooks/useLocalStorage";
 
+import { Link } from "react-router-dom";
+
 export default function Reserva() {
 
     const [nombre, setNombre] = useLocalStorage("", "nombre");
@@ -131,7 +133,7 @@ export default function Reserva() {
 
                     <div className="formulario__grupo" id="grupo__terminos">
                         <label className="formulario__label">
-                            <input className="formulario__checkbox" type="checkbox" name="terminos" id="terminos" />
+                            <input className="formulario__checkbox" type="checkbox" name="terminos" id="terminos" required />
                             Acepto Todos los Terminos y Condiciones.
                         </label>
 
@@ -143,7 +145,9 @@ export default function Reserva() {
                         <p className="formulario__mensaje" id="formulario__mensaje"> Rellene los campos Correctamente</p>
                     </div>
                 </form>
-                <button type="submit" className="reserva-btn-enviar" id="reserva-btn-enviar">Realizar reserva</button>
+                <Link to="/confirmar-reserva">
+                    <button type="submit" className="reserva-btn-enviar" id="reserva-btn-enviar">Realizar reserva</button>
+                </Link>
             </section>
         </main>
 

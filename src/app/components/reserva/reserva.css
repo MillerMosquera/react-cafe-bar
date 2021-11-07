@@ -58,8 +58,8 @@ main {
 .formulario__input {
     width: 100% !important;
     max-width: 600px !important;
-    color: #fafafa !important;
-    background-color: #0c0b09 !important;
+    color: #0c0b09 !important;
+    background-color: #fafafa !important;
     border: 1px solid #625b4b !important;
     border-radius: 3px !important;
     height: 45px !important;
@@ -94,8 +94,8 @@ main {
     width: 100% !important;
     max-width: 600px !important;
     padding: 10px 12px !important;
-    color: #bab3a6 !important;
-    background-color: #0c0b09 !important;
+    color: #0c0b09 !important;
+    background-color: #ffffff !important;
     border: 1px solid #625b4b !important;
     background-image: linear-gradient(45deg, transparent 50%, rgb(186, 179, 166) 60%), linear-gradient(135deg, rgb(186, 179, 166) 40%, transparent 50%) !important;
     background-position: calc(100% - 30px) 14px, calc(100% - 20px) 14px, 100% 0 !important;
@@ -129,9 +129,8 @@ textarea {
     box-sizing: border-box !important;
     font: 12px !important;
     font-family: "Open Sans", sans-serif !important;
-    color: #bab3a6 !important;
-    background-color: #0c0b09 !important;
-    border: 1px solid #625b4b !important;
+    color: #0c0b09 !important;
+    background-color: #ffffff !important;    border: 1px solid #625b4b !important;
     height: 100px !important;
     margin: 5px 0 15px 0 !important;
     padding: 5px 2px !important;
