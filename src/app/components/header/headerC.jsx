@@ -3,6 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Link } from "react-router-dom";
+import Modal from "../login/modal"
 
 export default function header() {
   return (
@@ -15,7 +16,7 @@ export default function header() {
           variant="dark">
 
           <Navbar.Brand>
-            <Link to="/"> <h1 className="logo me-auto me-lg-0 titulo">El cafecito</h1></Link>          </Navbar.Brand>
+            <Link to="/"> <h1 className="logo me-auto me-lg-0 titulo">El cafecito</h1></Link></Navbar.Brand>
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
@@ -54,6 +55,7 @@ export default function header() {
                   <i className="bi bi-cart"></i>
                 </div>
               </Nav.Link>
+              <Modal />
             </Nav>
 
           </Navbar.Collapse>
