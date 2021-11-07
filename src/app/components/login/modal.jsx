@@ -1,46 +1,35 @@
 
-import React, { Component } from 'react';
-import Modal from 'react-awesome-modal';
+import { useState } from 'react';
 import ContenidoModal from './contenidoModal';
+//import 'react-responsive-modal/styles.css';
 import './login.css'
+import Modal from 'react-responsive-modal';
 
+const Viewmodal = () => {
+    // import './examples/custom-styling.css';
+    const [open, setOpen] = useState(false);
 
-export default class Modals extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            visible: false
-        }
-    }
+    return (
+        <>
+            <button className="btn-login" onClick={() => setOpen(true)}>
+                <i className="bi bi-person-circle"></i>
+            </button>
 
-    openModal() {
-        this.setState({
-            visible: true
-        });
-    }
+            <Modal
+                open={open}
+                onClose={() => setOpen(false)}
+                center
+                classNames={{
+                    root: 'react-responsive-modal-root',
+                    overlay: 'react-responsive-modal-overlay',
+                    modal: 'react-responsive-modal-container',
+                    responsive: 'react-responsive-modal-modal',
+                }}
+            >
+                <ContenidoModal />
+            </Modal>
+        </>
+    );
+};
 
-    closeModal() {
-        this.setState({
-            visible: false
-        });
-    }
-
-    render() {
-        return (
-            <>
-                <div>
-                    <button className="btn-login"onClick={() => this.openModal()}><i className="bi bi-person-circle"></i></button>
-                    <Modal
-                        visible={this.state.visible}
-                        width="740"
-                        height="410"
-                        effect="fadeInUp"
-                        onClickAway={() => this.closeModal()}
-                    >
-                        <ContenidoModal />
-                    </Modal>
-                </div>
-            </>
-        );
-    }
-}
+export default Viewmodal;
