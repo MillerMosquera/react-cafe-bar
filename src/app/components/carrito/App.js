@@ -2,7 +2,7 @@
 
 import Basket from './Basket';
 import data from './data';
-import { useState } from 'react';
+// import { useState } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 function App() {
   

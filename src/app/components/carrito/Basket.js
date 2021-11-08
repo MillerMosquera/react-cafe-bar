@@ -54,6 +54,7 @@ export default function Basket(props) {
               </div>
               <div className="col-1 text-right">
                 <strong>${totalPrice.toFixed(2)}</strong>
+                {valor}
               </div>
             </div>
             <hr />

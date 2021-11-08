@@ -130,7 +130,7 @@ export default function ContactoC() {
                   <select className="form-select form-select-sm contacto" aria-label=".form-select-sm example" required
                     value={servicioComentario}
                     onChange={(e) => setServicio(e.target.value)}>
-                    <option defaultValue>Servicios</option>
+                    <option value="" selected disabled >Servicios</option>
                     <option value="Cumpleaños">Cumpleaños</option>
                     <option value="Aniversario">Aniversario</option>
                     <option value="Fiesta Infantil">Fiesta Infantil</option>

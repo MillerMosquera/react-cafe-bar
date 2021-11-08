@@ -1,7 +1,6 @@
 import useLocalStorage from "../hooks/useLocalStorage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./car.css";
-import { Link } from 'react-router-dom';
 export default function Compra() {
   
   const [nombre, setNombre] = useLocalStorage("", "nombre");
@@ -60,7 +59,7 @@ export default function Compra() {
           <p>Completa tus datos</p>
         </div>
 
-        <form className="formulario" id="formulario">
+        <form onSubmit={redirigir} className="formulario" id="formulario">
           <div className="formulario__grupo" id="grupo__nombre_c">
             <label for="nombre" className="label_nombre">
               Nombre Completo
@@ -121,6 +120,7 @@ export default function Compra() {
                 name="telefono"
                 id="telefono_c"
                 maxLenght="10"
+                required
                 placeholder="3124567845"
                 value={telefono}
                 onChange={(e) => setTelefono(e.target.value)}
@@ -138,6 +138,7 @@ export default function Compra() {
               rows="2"
               maxLenght="150"
               className="indicaciones"
+              required
               id="indicaciones_c"
               value={recomendaciones}
               onChange={(e) => setRecomendaciones(e.target.value)}
@@ -150,6 +151,7 @@ export default function Compra() {
               <input
                 className="formulario__checkbox"
                 type="checkbox"
+                required
                 name="terminos"
                 id="terminos"
               />
@@ -168,7 +170,7 @@ export default function Compra() {
               className="reserva-btn-enviar"
               id="reserva-btn-enviar"
             >
-              <Link as={Link} to="/confirmarCompra">Completar compra</Link>
+              Completar compra
             </button>
             <p className="formulario__mensaje" id="formulario__mensaje">
               {" "}
@@ -179,4 +181,9 @@ export default function Compra() {
       </section>
     </main>
   );
+}
+
+
+function redirigir() {
+  window.location.replace("#/confirmarCompra");
 }
