@@ -2,8 +2,6 @@ import React from "react";
 import "./reserva.css";
 import useLocalStorage from "../hooks/useLocalStorage";
 
-import { Link } from "react-router-dom";
-
 export default function Reserva() {
 
     const [nombre, setNombre] = useLocalStorage("", "nombre");
@@ -28,14 +26,14 @@ export default function Reserva() {
                     </div>
                 </div>
 
-                <form className="formulario" id="formulario">
+                <form onSubmit={redirigir} className="formulario" id="formulario">
 
 
                     <div className="formulario__grupo" id="grupo__nombre">
                         <label htmlFor="nombre" className="label_nombre">Nombre Completo</label>
                         <div className="formulario-input">
                             <input type="text" className="formulario__input" name="nombre" id="nombre" minLength="1" maxLength="40" placeholder="Escriba su nombre completo"
-                                value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                                required value={nombre} onChange={(e) => setNombre(e.target.value)} />
                         </div>
 
                         <p className="formulario__input-error">En este campo no pueden ir numeros o caracteres especiales(#,%,&-1232) </p>
@@ -45,7 +43,7 @@ export default function Reserva() {
                         <label htmlFor="email" className="label_email">Email</label>
                         <div className="formulario-input">
                             <input type="text" className="formulario__input" name="email" id="email" minLength="1" maxLength="50" placeholder="ejemplo@xxx.com"
-                                value={email} onChange={(e) => setEmail(e.target.value)}
+                                required value={email} onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
 
@@ -57,7 +55,7 @@ export default function Reserva() {
                         <label htmlFor="documento" className="label_documento">Documento</label>
                         <div className="formulario-input">
                             <input type="text" className="formulario__input" name="documento" id="documento" maxLength="10" placeholder="128993994"
-                                value={documento} onChange={(e) => setDocumento(e.target.value)} />
+                                required value={documento} onChange={(e) => setDocumento(e.target.value)} />
                         </div>
 
                         <p className="formulario__input-error">Por favor proporcione un numero de documento valido</p>
@@ -68,7 +66,7 @@ export default function Reserva() {
                         <label htmlFor="telefono" className="label_telefono">Telefono</label>
                         <div className="formulario-input">
                             <input type="text" className="formulario__input" name="telefono" id="telefono" maxLength="10" placeholder="3124567845"
-                                value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                                required value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                         </div>
 
                         <p className="formulario__input-error">Por favor proporcione un número de Telefono valido</p>
@@ -79,8 +77,8 @@ export default function Reserva() {
                         <label htmlFor="servicio" className="label_servicio">Servicios</label>
                         <div className="formulario-select">
                             <select className="formulario__select" aria-label=".form-select-sm example" name="servicio" id="servicio"
-                                value={servicio} onChange={(e) => setServicio(e.target.value)}>
-                                <option defaultValue="0">Servicios</option>
+                                required value={servicio} onChange={(e) => setServicio(e.target.value)}>
+                                <option value="" selected disabled >Servicios</option>
                                 <option value="cumpleanios">Cumpleaños</option>
                                 <option value="aniversario">Aniversario</option>
                                 <option value="fiesta">Fiesta Infantil</option>
@@ -96,7 +94,7 @@ export default function Reserva() {
                         <label htmlFor="personas" className="label_personas">Personas que asistiran</label>
                         <div className="formulario-input">
                             <input type="text" className="formulario__input" name="personas" id="personas" placeholder="1" maxLength="2"
-                                value={personas} onChange={(e) => setPersonas(e.target.value)} />
+                                required value={personas} onChange={(e) => setPersonas(e.target.value)} />
                         </div>
 
                         <p className="formulario__input-error">Por favor proporcione el numero de personas que van a asistir( hasta 15 personas)</p>
@@ -108,7 +106,7 @@ export default function Reserva() {
                         <label htmlFor="fecha" className="label_fecha">Fecha de su reserva</label>
                         <div className="formulario-input">
                             <input type="date" className="formulario__input" name="fecha" id="fecha"
-                                value={fecha} onChange={(e) => setFecha(e.target.value)} />
+                                required value={fecha} onChange={(e) => setFecha(e.target.value)} />
                         </div>
 
                         <p className="formulario__input-error">Por favor proporcione una fecha valida (Fecha dd/mm/aaaa)</p>
@@ -118,7 +116,7 @@ export default function Reserva() {
                         <label htmlFor="hora" className="label_hora">Hora de Su reserva</label>
                         <div className="formulario-input">
                             <input type="time" className="formulario__input" name="hora" id="hora"
-                                value={hora} onChange={(e) => setHora(e.target.value)} />
+                                required value={hora} onChange={(e) => setHora(e.target.value)} />
                         </div>
 
                         <p className="formulario__input-error">Verifique si la hora Correctamente (Sistema horario de 24 horas hh:mm)</p>
@@ -127,13 +125,13 @@ export default function Reserva() {
                     <div className="box">
                         <label className="label_indicaciones">Dejanos Tus Indicaciones.</label>
                         <textarea rows="2" maxLength="150" className="indicaciones" id="indicaciones"
-                            value={indicaciones} onChange={(e) => setIndicaciones(e.target.value)}></textarea>
+                            required value={indicaciones} onChange={(e) => setIndicaciones(e.target.value)}></textarea>
                         <div id="contador">0/150</div>
                     </div>
 
                     <div className="formulario__grupo" id="grupo__terminos">
                         <label className="formulario__label">
-                            <input className="formulario__checkbox" type="checkbox" name="terminos" id="terminos" required />
+                            <input className="formulario__checkbox" required type="checkbox" name="terminos" id="terminos" required />
                             Acepto Todos los Terminos y Condiciones.
                         </label>
 
@@ -144,12 +142,15 @@ export default function Reserva() {
                     <div className="formulario__grupo-btn-enviar">
                         <p className="formulario__mensaje" id="formulario__mensaje"> Rellene los campos Correctamente</p>
                     </div>
-                </form>
-                <Link to="/confirmarReserva">
                     <button type="submit" className="reserva-btn-enviar" id="reserva-btn-enviar">Realizar reserva</button>
-                </Link>
+                </form>
             </section>
         </main>
 
     );
+}
+
+
+function redirigir() {
+    window.location.replace("#/confirmarReserva");
 }
