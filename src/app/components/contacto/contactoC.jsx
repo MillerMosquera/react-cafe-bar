@@ -28,7 +28,6 @@ export default function ContactoC() {
       emailCliente:  datos[1],
       servicio:  datos[2],
       mensaje: datos[3],
-
   };
 
     emailjs
