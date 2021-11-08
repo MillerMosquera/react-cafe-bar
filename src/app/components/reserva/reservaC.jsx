@@ -145,7 +145,7 @@ export default function Reserva() {
                         <p className="formulario__mensaje" id="formulario__mensaje"> Rellene los campos Correctamente</p>
                     </div>
                 </form>
-                <Link to="/confirmar-reserva">
+                <Link to="/confirmarReserva">
                     <button type="submit" className="reserva-btn-enviar" id="reserva-btn-enviar">Realizar reserva</button>
                 </Link>
             </section>

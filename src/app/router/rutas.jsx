@@ -27,13 +27,9 @@ function rutas() {
         <Route path="/contacto" component={Contacto} />
         <Route path="/carrito" component={Carrito} />
         <Route path="/reserva" component={Reserva} />
-<<<<<<< HEAD
         <Route path="/compra" component={Compra} />
         <Route path="/confirmarCompra" component={Confcompra} />
-=======
-        <Route path="/confirmar-reserva" component={ConfirmarReserva} />
-
->>>>>>> f483ef9314a48188a718588254e00db1f8a1563f
+        <Route path="/confirmarReserva" component={ConfirmarReserva} />
       </Switch>
       <Footer />
     </HashRouter>

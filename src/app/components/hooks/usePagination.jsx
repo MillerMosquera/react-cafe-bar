@@ -75,7 +75,7 @@ function usePagination() {
   };
  
   const recarga = ()=>{
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       window.location.reload(false);
     }, 1500);
   }
