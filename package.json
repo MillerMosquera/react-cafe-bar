@@ -18,11 +18,7 @@
     "react-responsive-modal": "^6.1.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
-<<<<<<< HEAD
     "react-use-cart": "^1.13.0",
-=======
-    "styled-components": "^5.3.3",
->>>>>>> f483ef9314a48188a718588254e00db1f8a1563f
     "sweetalert2": "^11.1.9",
     "web-vitals": "^1.1.2"
   },
