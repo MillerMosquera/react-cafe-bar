@@ -4,22 +4,24 @@ import ReactPaginate from "react-paginate";
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../menu/menu.css";
-import Button from '../menu/buttonPdf'
+import Button from "../menu/buttonPdf";
 import useLocalStorage from "../hooks/useLocalStorage";
-import alertamsg from '../menu/alert'
+import alertamsg from "../menu/alert";
+
+
 
 function usePagination() {
+
+  const [cartItems, setCartItems] = useLocalStorage([], "Carro");
+
   const [offset, setOffset] = useState(0);
   const [data, setData] = useState([]);
   const [perPage] = useState(12);
   const [pageCount, setPageCount] = useState(0);
 
-  const [datos, setDatos] = useLocalStorage([], "datos");
 
-//function 
-  
-  
 
+  //function
   const getData = async () => {
     const res = await axios.get(
       `https://617716f19c328300175f57cb.mockapi.io/menu`
@@ -41,9 +43,11 @@ function usePagination() {
                   {pd.descripcion}
                   <i
                     className="bi-cart add-to-cart-btn"
-                    value={datos}
+                    
                     onClick={() => {
-                      setDatos((e) => [...e, pd]); alertamsg()
+                      recarga();
+                      onAdd(pd);
+                      alertamsg();
                     }}
                   ></i>
                 </p>
@@ -57,9 +61,29 @@ function usePagination() {
     setPageCount(Math.ceil(data.length / perPage));
   };
 
+  const onAdd = (pd) => {
+    const exist = cartItems.find((x) => x.id === pd.id);
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === pd.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...pd, qty: 1 }]);
+    }
+  };
+ 
+  const recarga = ()=>{
+    const timer = setTimeout(() => {
+      window.location.reload(false);
+    }, 1500);
+  }
+  
+
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
-    setOffset(selectedPage * perPage);  
+    setOffset(selectedPage * perPage);
   };
 
   useEffect(() => {
@@ -67,7 +91,6 @@ function usePagination() {
     getData();
     // eslint-disable-next-line
   }, [offset]);
-
 
   return (
     <section className="section">

@@ -1,10 +1,17 @@
-import CarritoC from "../components/carrito/carritoC";
+import React from 'react';
 
-
-function carrito() {
+import App from '../components/carrito/App'
+import "../components/carrito/car.css";
+function Carrito() {
+    
+    
     return (
-        <CarritoC></CarritoC>
+        <>
+    
+        <App></App>
+        
+        </>
     );
     }
 
-export default carrito;
+export default Carrito;

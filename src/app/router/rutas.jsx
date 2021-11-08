@@ -7,8 +7,12 @@ import Contacto from "../layout/contacto";
 import Carrito from "../layout/carrito";
 import Reserva from "../layout/reserva";
 
+import Compra from "../components/carrito/compra"
+
 import Header from "../components/header/headerC";
 import Footer from "../components/footer/footerC";
+import Confcompra from "../components/carrito/confirmarCompra";
+
 
 function rutas() {
   return (
@@ -22,6 +26,8 @@ function rutas() {
         <Route path="/contacto" component={Contacto} />
         <Route path="/carrito" component={Carrito} />
         <Route path="/reserva" component={Reserva} />
+        <Route path="/compra" component={Compra} />
+        <Route path="/confirmarCompra" component={Confcompra} />
       </Switch>
       <Footer/>
     </HashRouter>
