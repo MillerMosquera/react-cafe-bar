@@ -1,12 +1,63 @@
+
+import React from 'react';
+
+import emailjs from 'emailjs-com';
+import Swal from "sweetalert2";
+
 import "./contactenos.css"
 import useLocalStorage from "../hooks/useLocalStorage";
 
+
 export default function ContactoC() {
 
-  const [nombre, setNombre] = useLocalStorage("", "nombre");
-  const [email, setEmail] = useLocalStorage("", "email");
-  const [servicio, setServicio] = useLocalStorage("", "servicio");
+  const [nombreCliente, setNombre] = useLocalStorage("", "nombreCliente");
+  const [emailCliente, setEmail] = useLocalStorage("", "emailCliente");
+  const [servicioComentario, setServicio] = useLocalStorage("", "servicioComentario");
   const [mensaje, setMensaje] = useLocalStorage("", "mensaje");
+
+  const sendEmail = (e) => {
+
+    emailjs.init("user_jsn9rn4WYbeoN7GVQdUjY");
+
+    e.preventDefault();
+
+    var datos = obtenerDatos();
+
+    var parametrosCorreo = {
+      nombreCliente:  datos[0],
+      emailCliente:  datos[1],
+      servicio:  datos[2],
+      mensaje: datos[3],
+
+  };
+
+    emailjs
+        .send('email-cafe-bar', 'email_comentario', parametrosCorreo)
+        .then(function () {
+
+            localStorage.clear();
+            window.location.replace("#/");
+
+            Swal.fire({
+                title: 'Comentario realizado...',
+                text: 'Revisa tu correo para mayor información.',
+                icon: 'success',
+                timer: 1000,
+                showConfirmButton: false,
+
+            });
+        }, function (error) {
+            console.log('Error...', error);
+            Swal.fire({
+                title: 'Comentario fallido...',
+                text: 'Se genero in error al realizar comentario, intenta de nuevo.',
+                icon: 'error',
+                timer: 1000,
+                showConfirmButton: false,
+
+            });
+        });
+  };
 
   return (
     <>
@@ -56,22 +107,21 @@ export default function ContactoC() {
                 </div>
 
               </div>
-
             </div>
 
             <div className="col-lg-8 mt-5 mt-lg-0">
 
-              <form action="" method="post" className="php-email-form">
+              <form onSubmit={sendEmail} className="php-email-form">
                 <div className="row">
                   <div className="col-md-6 form-group">
                     <input type="text" name="name" className="form-control" id="name" placeholder="Su nombre" required
-                      value={nombre}
+                      value={nombreCliente}
                       onChange={(e) => setNombre(e.target.value)}
                     />
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
                     <input type="email" className="form-control" name="email" id="email" placeholder="Su Email" required
-                      value={email}
+                      value={emailCliente}
                       onChange={(e) => setEmail(e.target.value)} />
                   </div>
                 </div>
@@ -79,7 +129,7 @@ export default function ContactoC() {
                 <div className="form-group mt-3">
 
                   <select className="form-select form-select-sm contacto" aria-label=".form-select-sm example" required
-                    value={servicio}
+                    value={servicioComentario}
                     onChange={(e) => setServicio(e.target.value)}>
                     <option defaultValue>Servicios</option>
                     <option value="Cumpleaños">Cumpleaños</option>
@@ -122,4 +172,13 @@ export default function ContactoC() {
 
     </>
   );
+}
+
+function obtenerDatos() {
+  return [
+      localStorage.getItem("nombreCliente").replaceAll('"', ''),
+      localStorage.getItem("emailCliente").replaceAll('"', ''),
+      localStorage.getItem("servicioComentario").replaceAll('"', ''),
+      localStorage.getItem("mensaje").replaceAll('"', '')
+  ]
 }
