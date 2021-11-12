@@ -13,6 +13,7 @@ export default function Compra() {
     ? JSON.parse(localStorage.getItem("Carro"))
     : [];
   console.log(menu);
+
   const data = menu.map((item) => (
     <tr key={item.id}>
       <td>{item.qty}</td>
@@ -20,6 +21,8 @@ export default function Compra() {
       <td>{item.precio}</td>
     </tr>
   ));
+
+  
 
   return (
     <main id="main">

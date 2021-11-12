@@ -50,12 +50,15 @@ export default function header() {
                 </div>
               </Nav.Link>
 
-              <Nav.Link as={Link} to="/carrito">
+              <Nav.Link as={Link} to="/carrito" className="carrito-campo">
+
                 <div className="carrito-btn">
                   <i className="bi bi-cart"></i>
                 </div>
               </Nav.Link>
+
               <Modal />
+
             </Nav>
 
           </Navbar.Collapse>
