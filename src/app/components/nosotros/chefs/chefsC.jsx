@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
-import Chefs from "./chefs";
+import Carousel from 'react-bootstrap/Carousel'
+import ChefItem from "./chefItem";
 
 export default function ChefsC() {
 
@@ -11,7 +11,7 @@ export default function ChefsC() {
 
     const getData = async () => {
         try {
-            const res = await axios.get("https://6181962932c9e2001780489b.mockapi.io/chefs");
+            const res = await axios.get("http://localhost:40188/api/nosotros/empleado");
             setData(res.data);
         } catch (err) {
             console.log(err);
@@ -25,18 +25,35 @@ export default function ChefsC() {
 
 
     const chefs = data.map(chef => (
-        <div key={chef.id}>
-            <Chefs
-                descripcion={chef.descripcion}
-                titulo={chef.titulo}
-                chefs={chef.chefs}
+        <Carousel.Item key={chef.id}>
+            <ChefItem
+                nombre={chef.nombre}
+                cargo={chef.cargo}
+                foto={chef.foto}
+                twitter={chef.twitter}
+                facebook={chef.facebook}
+                instagram={chef.instagram}
+                youtube={chef.youtube}
             />
-        </div>
+        </Carousel.Item>
     ));
 
     return (
         <div>
-            {chefs}
+            <section id="chefs" className="chefs">
+                <div className="container">
+                    <div className="section-title">
+                        <div className="titulo-seccion">
+                            <h2>Chefs</h2>
+                        </div>
+                        <p>Conoce a nuestro personal</p>
+                    </div>
+
+                    <Carousel >
+                        {chefs}
+                    </Carousel>
+                </div>
+            </section>
         </div>
     );
 
