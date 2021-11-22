@@ -24,7 +24,7 @@ function usePagination() {
   //function
   const getData = async () => {
     const res = await axios.get(
-      `https://617716f19c328300175f57cb.mockapi.io/menu`
+      `http://localhost:40188/api/platos`
     );
     const data = res.data;
     const slice = data.slice(offset, offset + perPage);
@@ -33,12 +33,12 @@ function usePagination() {
         <div className="container">
           <div className="menu-container">
             <div className="menu-item filter-starters">
-              <img src={pd.imgSrc} className="menu-img" alt="" />
+              <img src={pd.imgsrc} className="menu-img" alt="" />
               <div className="menu-content">
                 <label className="nombre">{pd.title}</label>
                 <span className="precio">{pd.precio} $</span>
               </div>
-              <div className="menu-ingredients">
+              <div className="menu-ingredi ents">
                 <p className="descrip">
                   {pd.descripcion}
                   <i
