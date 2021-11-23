@@ -1,4 +1,4 @@
-import ReservaC from "../components/reserva/reservaC";
+import ReservaC from "../../components/reserva/reservaC";
 
 function reserva() {
     return (

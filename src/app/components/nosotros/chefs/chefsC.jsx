@@ -28,6 +28,7 @@ export default function ChefsC() {
         <Carousel.Item key={chef.id}>
             <ChefItem
                 nombre={chef.nombre}
+                apellido={chef.apellido}
                 cargo={chef.cargo}
                 foto={chef.foto}
                 twitter={chef.twitter}

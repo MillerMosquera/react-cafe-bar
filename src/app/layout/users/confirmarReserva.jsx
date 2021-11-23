@@ -1,4 +1,4 @@
-import ConfirmarReservaC from '../components/reserva/confirmarReservaC'
+import ConfirmarReservaC from '../../components/reserva/confirmarReservaC'
 
 function ConfirmarReserva() {
   return (

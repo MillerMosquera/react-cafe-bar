@@ -10,7 +10,7 @@ class ChefItem extends Component {
                     <img src={this.props.foto} className="img-fluid" alt="" />
                     <div className="member-info">
                         <div className="member-info-content">
-                            <h4>{this.props.nombre}</h4>
+                            <h4>{this.props.nombre} {this.props.apellido}</h4>
                             <span>{this.props.cargo}</span>
                         </div>
 
