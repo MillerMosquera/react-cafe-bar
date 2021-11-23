@@ -4,7 +4,7 @@ import axios from 'axios';
 import Modal from 'react-responsive-modal';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const url = ""; //url de la api 
+const url = "https://cafecito-backend.herokuapp.com/api/reserva"; //url de la api 
 
 class ReservaAdmin extends Component {
 
@@ -128,7 +128,7 @@ class ReservaAdmin extends Component {
             </thead>
 
             <tbody>
-              {this.state.data.map(reserva => {
+            {this.state.data.map(reserva => {
                 return (
                   <tr>
                     <td>{reserva.id}</td>

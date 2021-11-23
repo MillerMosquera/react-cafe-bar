@@ -9,7 +9,7 @@ export default function HistoriaC() {
 
     const getData = async () => {
         try {
-            const res = await axios.get("https://6181962932c9e2001780489b.mockapi.io/historia");
+            const res = await axios.get("https://cafecito-backend.herokuapp.com/api/nosotros/historia");
             setData(res.data);
         } catch (err) {
             console.log(err);

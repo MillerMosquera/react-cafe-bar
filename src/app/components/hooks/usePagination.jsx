@@ -24,7 +24,7 @@ function usePagination() {
   //function
   const getData = async () => {
     const res = await axios.get(
-      `http://localhost:40188/api/platos`
+      `https://cafecito-backend.herokuapp.com/api/platos`
     );
     const data = res.data;
     const slice = data.slice(offset, offset + perPage);

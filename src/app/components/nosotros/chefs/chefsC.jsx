@@ -11,7 +11,7 @@ export default function ChefsC() {
 
     const getData = async () => {
         try {
-            const res = await axios.get("http://localhost:40188/api/nosotros/empleado");
+            const res = await axios.get("https://cafecito-backend.herokuapp.com/api/nosotros/empleado");
             setData(res.data);
         } catch (err) {
             console.log(err);

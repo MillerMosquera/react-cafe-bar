@@ -485,6 +485,7 @@ p {
   padding: 5px;
   box-sizing: content-box;
   min-height: 320px;
+
 }
 
 .testimonials .testimonial-item .testimonial-img {
@@ -522,7 +523,8 @@ p {
 }
 
 .slider {
-  margin-left: 13%;
+  margin-left: 15%;
+  width: 170%;
   margin-bottom: 5%;
 }
 
@@ -531,5 +533,6 @@ p {
     margin-left: 12%;
     margin-right: 12%;
     margin-bottom: 10%;
+    width: 70%;
   }
 }
