@@ -38,7 +38,7 @@ function usePagination() {
                 <label className="nombre">{pd.title}</label>
                 <span className="precio">{pd.precio} $</span>
               </div>
-              <div className="menu-ingredi ents">
+              <div className="menu-ingredients">
                 <p className="descrip">
                   {pd.descripcion}
                   <i
