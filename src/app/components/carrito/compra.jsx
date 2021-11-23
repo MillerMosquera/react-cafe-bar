@@ -94,7 +94,7 @@ export default function Compra() {
             </label>
             <div className="formulario-input">
               <input
-                type="text"
+                type="email"
                 className="formulario__input"
                 name="email"
                 id="email_c"

@@ -42,7 +42,7 @@ export default function Reserva() {
                     <div className="formulario__grupo" id="grupo__email">
                         <label htmlFor="email" className="label_email">Email</label>
                         <div className="formulario-input">
-                            <input type="text" className="formulario__input" name="email" id="email" minLength="1" maxLength="50" placeholder="ejemplo@xxx.com"
+                            <input type="email" className="formulario__input" name="email" id="email" minLength="1" maxLength="50" placeholder="ejemplo@xxx.com"
                                 required value={email} onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
@@ -93,7 +93,7 @@ export default function Reserva() {
                     <div className="formulario__grupo" id="grupo__personas">
                         <label htmlFor="personas" className="label_personas">Personas que asistiran</label>
                         <div className="formulario-input">
-                            <input type="text" className="formulario__input" name="personas" id="personas" placeholder="1" maxLength="2"
+                            <input type="number" className="formulario__input" name="personas" id="personas" placeholder="1" maxLength="2"
                                 required value={personas} onChange={(e) => setPersonas(e.target.value)} />
                         </div>
 
