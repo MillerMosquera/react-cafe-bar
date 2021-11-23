@@ -29,7 +29,7 @@ export default function TestimoniosC() {
 
         <Carousel.Item key={testimonio.id}>
 
-            <div className="slider">
+            <div className="slider-testimonio">
                     <TestimonioItem
                         descripcion={testimonio.descripcion}
                         nombre={testimonio.nombre}
