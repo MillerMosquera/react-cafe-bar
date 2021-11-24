@@ -25,7 +25,7 @@ export default function Basket(props) {
               <tbody>
         {cartItems.map((item) => (    
             <tr>
-                <td style={{ textAlign:'center'}}><img width="150px"src={item.imgSrc} alt={item.title} ></img></td>
+                <td style={{ textAlign:'center'}}><img width="150px"src={item.imgsrc} alt={item.title} ></img></td>
                 <td style={{ textAlign:'center'}}>{item.title}</td>
                 <td style={{ textAlign:'center'}}><button  onClick={() => onRemove(item)} className="remove ">-</button>
                     <button onClick={() => onAdd(item)} className="add">+</button>
