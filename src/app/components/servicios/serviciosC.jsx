@@ -1,10 +1,45 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import 'bootstrap';
-
 import "./boton.css"
 import reserved from "./reserved.png";
 import { Link } from "react-router-dom";
 
-function serviciosC() {
+function ServiciosC() {
+
+    const [data, setData] = useState([]);
+   //function
+  const getData = async () => {
+    const res = await axios.get(
+      `https://cafecito-backend.herokuapp.com/api/servicio`
+    );
+    const data = res.data;
+    const postData = data.map((pd) => (
+      <section key={pd.id} className="menu">
+         <div id="cumple" className="row">
+                        <div className="col-lg-5 col-md-6 align-self-center">
+                            <h1>{pd.numero}</h1>
+                            <div className="deshes-text">
+                                <h3><span>{pd.titulo}</span><br /></h3>
+                                <p className="pt-3">{pd.descripcion} </p>
+                            </div>
+                        </div>
+                        <div className="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                            <img src={pd.foto} alt="" className="img-fluid" />
+                        </div>
+        </div>
+      </section>
+    ));
+    setData(postData);
+    
+  };
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    getData();
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <>
       <section>
@@ -20,105 +55,8 @@ function serviciosC() {
 
                         </div>
                     </div>
-                 
-                    <div id="cumple" className="row">
-                        <div className="col-lg-5 col-md-6 align-self-center">
-                            <h1>01.</h1>
-                            <div className="deshes-text">
-                                <h3><span>Celebración de cumpleaños</span><br /></h3>
-                                <p className="pt-3">Lorem ipsum dolor sit amet consectetur adipiscing elit litora, et est aenean fames sociis iaculis id nec, ultricies viverra facilisis sem quis eu sodales. Turpis torquent vehicula senectus suspendisse porta netus fringilla
-                                    placerat arcu urna mollis, maecenas eu ad potenti hendrerit ultrices a sem mauris ridiculus, bibendum sociis fermentum proin aptent ligula tempor diam sapien pellentesque. </p>
 
-                                <a href="reserva.html" className="template-btn3 mt-3">Mas información<span><i className="fa fa-long-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                        <div className="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                            <img src="https://stevenedev.github.io/Cafe-Bar/img/gallery/gallery-2.jpg" alt="" className="img-fluid" />
-                        </div>
-                    </div>
-                 
-                    <div id="aniversario" className="row mt-5">
-                        <div className="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                            <img src="https://stevenedev.github.io/Cafe-Bar/img/gallery/gallery-7.jpg" alt="" className="img-fluid" />
-                        </div>
-                        <div className="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
-                            <h1>02.</h1>
-                            <div className="deshes-text">
-                                <h3><span>Aniversarios</span><br /></h3>
-                                <p className="pt-3">Lorem ipsum dolor sit amet consectetur adipiscing elit litora, et est aenean fames sociis iaculis id nec, ultricies viverra facilisis sem quis eu sodales. Turpis torquent vehicula senectus suspendisse porta netus fringilla
-                                    placerat arcu urna mollis, maecenas eu ad potenti hendrerit ultrices a sem mauris ridiculus, bibendum sociis fermentum proin aptent ligula tempor diam sapien pellentesque.</p>
-
-                                <a href="reserva.html" className="template-btn3 mt-3">Mas información <span><i className="fa fa-long-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                   
-                    <div id="infantil" className="row">
-                        <div className="col-lg-5 col-md-6 align-self-center">
-                            <h1>03.</h1>
-                            <div className="deshes-text">
-                                <h3><span>Fiestas infantiles</span><br /></h3>
-                                <p className="pt-3">Lorem ipsum dolor sit amet consectetur adipiscing elit litora, et est aenean fames sociis iaculis id nec, ultricies viverra facilisis sem quis eu sodales. Turpis torquent vehicula senectus suspendisse porta netus fringilla
-                                    placerat arcu urna mollis, maecenas eu ad potenti hendrerit ultrices a sem mauris ridiculus, bibendum sociis fermentum proin aptent ligula tempor diam sapien pellentesque. </p>
-
-                                <a href="reserva.html" className="template-btn3 mt-3">Mas información<span><i className="fa fa-long-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                        <div className="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                            <img src="https://stevenedev.github.io/Cafe-Bar/img/gallery/gallery-8.jpg" alt="" className="img-fluid" />
-                        </div>
-                    </div>
-
-                 
-                    <div id="propuestas" className="row mt-5">
-                        <div className="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                            <img src="https://stevenedev.github.io/Cafe-Bar/img/gallery/gallery-5.jpg" alt="" className="img-fluid" />
-                        </div>
-                        <div className="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
-                            <h1>04.</h1>
-                            <div className="deshes-text">
-                                <h3><span>Declaraciones o propuestas</span><br /></h3>
-                                <p className="pt-3">Lorem ipsum dolor sit amet consectetur adipiscing elit litora, et est aenean fames sociis iaculis id nec, ultricies viverra facilisis sem quis eu sodales. Turpis torquent vehicula senectus suspendisse porta netus fringilla
-                                    placerat arcu urna mollis, maecenas eu ad potenti hendrerit ultrices a sem mauris ridiculus, bibendum sociis fermentum proin aptent ligula tempor diam sapien pellentesque. </p>
-
-                                <a href="reserva.html" className="template-btn3 mt-3">Mas información <span><i className="fa fa-long-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div id="despedidas" className="row">
-                        <div className="col-lg-5 col-md-6 align-self-center">
-                            <h1>05.</h1>
-                            <div className="deshes-text">
-                                <h3><span>Despedidas</span><br /></h3>
-                                <p className="pt-3">Lorem ipsum dolor sit amet consectetur adipiscing elit litora, et est aenean fames sociis iaculis id nec, ultricies viverra facilisis sem quis eu sodales. Turpis torquent vehicula senectus suspendisse porta netus fringilla
-                                    placerat arcu urna mollis, maecenas eu ad potenti hendrerit ultrices a sem mauris ridiculus, bibendum sociis fermentum proin aptent ligula tempor diam sapien pellentesque.</p>
-
-                                <a href="reserva.html" className="template-btn3 mt-3">Mas información<span><i className="fa fa-long-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                        <div className="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                            <img src="https://stevenedev.github.io/Cafe-Bar/img/gallery/gallery-4.jpg" alt="" className="img-fluid" />
-                        </div>
-                    </div>
-
-                    
-                    <div id="cena" className="row mt-5">
-                        <div className="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-                            <img src="https://stevenedev.github.io/Cafe-Bar/img/gallery/gallery-3.jpg" alt="" className="img-fluid" />
-                        </div>
-                        <div className="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
-                            <h1>06.</h1>
-                            <div className="deshes-text">
-                                <h3><span>Cena con amigos</span><br /></h3>
-                                <p className="pt-3">Lorem ipsum dolor sit amet consectetur adipiscing elit litora, et est aenean fames sociis iaculis id nec, ultricies viverra facilisis sem quis eu sodales. Turpis torquent vehicula senectus suspendisse porta netus fringilla
-                                    placerat arcu urna mollis, maecenas eu ad potenti hendrerit ultrices a sem mauris ridiculus, bibendum sociis fermentum proin aptent ligula tempor diam sapien pellentesque. </p>
-
-                                <a href="reserva.html" className="template-btn3 mt-3">Mas información <span><i className="fa fa-long-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
+                    <div className="servicios">{data}</div>
 
                 </div>
             </div>
@@ -133,4 +71,4 @@ function serviciosC() {
     </>
   );
 }
-export default serviciosC;
+export default ServiciosC;

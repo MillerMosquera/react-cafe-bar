@@ -80,7 +80,6 @@ function usePagination() {
     }, 1500);
   }
   
-
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
     setOffset(selectedPage * perPage);

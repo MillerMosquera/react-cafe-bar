@@ -14,7 +14,7 @@ import Compra from "../components/carrito/compra";
 import Confcompra from "../components/carrito/confirmarCompra";
 
 import ReservaAdmin from "../components/admin/reserva/reservaAdmin";
-
+import ServicioAdmin from "../components/admin/servicio/servicioAdmin";
 
 import Header from "../components/header/headerC";
 import Footer from "../components/footer/footerC";
@@ -51,10 +51,36 @@ const routes = [
     exact: false,
     routes: [
       {
+        path: "/admin/inicio",
+        component: ReservaAdmin,//ACA VA SU COMPONENTE
+        exact: true
+      },
+      {
+        path: "/admin/nosotros",
+        component: ReservaAdmin,//ACA VA SU COMPONENTE
+        exact: true
+      },
+      {
+        path: "/admin/menu",
+        component: ReservaAdmin,//ACA VA SU COMPONENTE
+        exact: true
+      },
+      {
+        path: "/admin/servicio",
+        component: ServicioAdmin,
+        exact: true
+      },
+      {
+        path: "/admin/mensaje",
+        component: ReservaAdmin,//ACA VA SU COMPONENTE
+        exact: true
+      },
+      {
         path: "/admin/reserva",
         component: ReservaAdmin,
         exact: true
       }
+      
     ]
   },
   {

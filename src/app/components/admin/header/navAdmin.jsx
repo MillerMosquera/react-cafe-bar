@@ -20,27 +20,27 @@ function NavAdmin() {
             <Nav className="me-auto items" >
 
 
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/admin/inicio">
                 <div className="item">
                   Inicio
                 </div>
               </Nav.Link>
-              <Nav.Link as={Link} to="/nosotros">
+              <Nav.Link as={Link} to="/admin/nosotros">
                 <div className="item">
                   Nosotros
                 </div>
               </Nav.Link>
-              <Nav.Link as={Link} to="/menu">
+              <Nav.Link as={Link} to="/admin/menu">
                 <div className="item">
                   Menú
                 </div>
               </Nav.Link>
-              <Nav.Link as={Link} to="/servicios">
+              <Nav.Link as={Link} to="/admin/servicio">
                 <div className="item">
                   Servicios
                 </div>
               </Nav.Link>
-              <Nav.Link as={Link} to="/contacto">
+              <Nav.Link as={Link} to="/admin/mensaje">
                 <div className="item">
                   Mensajes
                 </div>
