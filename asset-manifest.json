@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/react-cafe-bar/static/css/main.37db31bb.chunk.css",
-    "main.js": "/react-cafe-bar/static/js/main.42c4b301.chunk.js",
-    "main.js.map": "/react-cafe-bar/static/js/main.42c4b301.chunk.js.map",
-    "runtime-main.js": "/react-cafe-bar/static/js/runtime-main.6facd450.js",
-    "runtime-main.js.map": "/react-cafe-bar/static/js/runtime-main.6facd450.js.map",
+    "main.js": "/react-cafe-bar/static/js/main.695d265b.chunk.js",
+    "main.js.map": "/react-cafe-bar/static/js/main.695d265b.chunk.js.map",
+    "runtime-main.js": "/react-cafe-bar/static/js/runtime-main.a73ab245.js",
+    "runtime-main.js.map": "/react-cafe-bar/static/js/runtime-main.a73ab245.js.map",
     "static/css/2.e4a87646.chunk.css": "/react-cafe-bar/static/css/2.e4a87646.chunk.css",
-    "static/js/2.319a0e39.chunk.js": "/react-cafe-bar/static/js/2.319a0e39.chunk.js",
-    "static/js/2.319a0e39.chunk.js.map": "/react-cafe-bar/static/js/2.319a0e39.chunk.js.map",
-    "static/js/3.e5732df7.chunk.js": "/react-cafe-bar/static/js/3.e5732df7.chunk.js",
-    "static/js/3.e5732df7.chunk.js.map": "/react-cafe-bar/static/js/3.e5732df7.chunk.js.map",
+    "static/js/2.1cf79fa1.chunk.js": "/react-cafe-bar/static/js/2.1cf79fa1.chunk.js",
+    "static/js/2.1cf79fa1.chunk.js.map": "/react-cafe-bar/static/js/2.1cf79fa1.chunk.js.map",
+    "static/js/3.6a107045.chunk.js": "/react-cafe-bar/static/js/3.6a107045.chunk.js",
+    "static/js/3.6a107045.chunk.js.map": "/react-cafe-bar/static/js/3.6a107045.chunk.js.map",
     "index.html": "/react-cafe-bar/index.html",
     "static/css/2.e4a87646.chunk.css.map": "/react-cafe-bar/static/css/2.e4a87646.chunk.css.map",
     "static/css/main.37db31bb.chunk.css.map": "/react-cafe-bar/static/css/main.37db31bb.chunk.css.map",
-    "static/js/2.319a0e39.chunk.js.LICENSE.txt": "/react-cafe-bar/static/js/2.319a0e39.chunk.js.LICENSE.txt",
+    "static/js/2.1cf79fa1.chunk.js.LICENSE.txt": "/react-cafe-bar/static/js/2.1cf79fa1.chunk.js.LICENSE.txt",
     "static/media/bootstrap-icons.css": "/react-cafe-bar/static/media/bootstrap-icons.d0ec932c.woff2",
     "static/media/reserved.2f5f7155.png": "/react-cafe-bar/static/media/reserved.2f5f7155.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6facd450.js",
+    "static/js/runtime-main.a73ab245.js",
     "static/css/2.e4a87646.chunk.css",
-    "static/js/2.319a0e39.chunk.js",
+    "static/js/2.1cf79fa1.chunk.js",
     "static/css/main.37db31bb.chunk.css",
-    "static/js/main.42c4b301.chunk.js"
+    "static/js/main.695d265b.chunk.js"
   ]
 }
