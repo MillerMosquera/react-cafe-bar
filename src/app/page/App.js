@@ -22,6 +22,7 @@ import Header from "../components/header/headerC";
 import Footer from "../components/footer/footerC";
 import HistoriaAdmin from "../components/admin/nosotros/historiaAdmin";
 import InformacionAdmin from "../components/admin/nosotros/informacionAdmin";
+import TestimonioAdmin from "../components/admin/nosotros/testimonioAdmin";
 
 
 
@@ -72,6 +73,11 @@ const routes = [
       {
         path: "/admin/nosotros/informacion",
         component: InformacionAdmin,//ACA VA SU COMPONENTE
+        exact: true
+      },
+      {
+        path: "/admin/nosotros/testimonios",
+        component: TestimonioAdmin,//ACA VA SU COMPONENTE
         exact: true
       },
       {
