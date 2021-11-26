@@ -2,6 +2,7 @@ import React from "react";
 
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
+import axios from 'axios';
 
 import "./contactenos.css";
 import useLocalStorage from "../hooks/useLocalStorage";
@@ -15,12 +16,27 @@ export default function ContactoC() {
   );
   const [mensaje, setMensaje] = useLocalStorage("", "mensaje");
 
-  const sendEmail = (e) => {
+
+  const sendEmail = async (e) => {
     emailjs.init("user_jsn9rn4WYbeoN7GVQdUjY");
 
-    e.preventDefault();
-
     var datos = obtenerDatos();
+
+    var parametrosAPI = {
+      nombre: datos[0],
+      email: datos[1],
+      servicio: datos[2],
+      mensaje: datos[3],
+    };
+
+    var url = "https://cafecito-backend.herokuapp.com/api/contactenos/"; //url de la api 
+
+    axios.post(url, parametrosAPI).then(response => {
+      console.log(response);
+    }).catch(error => {
+      console.log(error.message);
+    })
+
 
     var parametrosCorreo = {
       nombreCliente: datos[0],
