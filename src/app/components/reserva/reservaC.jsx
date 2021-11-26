@@ -131,7 +131,7 @@ export default function Reserva() {
 
                     <div className="formulario__grupo" id="grupo__terminos">
                         <label className="formulario__label">
-                            <input className="formulario__checkbox" required type="checkbox" name="terminos" id="terminos" required />
+                            <input className="formulario__checkbox" type="checkbox" name="terminos" id="terminos" required />
                             Acepto Todos los Terminos y Condiciones.
                         </label>
 

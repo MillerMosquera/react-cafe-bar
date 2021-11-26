@@ -147,9 +147,10 @@ export default function ContactoC() {
                     <option value="" selected disabled>
                       Asunto
                     </option>
-                    <option value="comentario">Comentario</option>
-                    <option value="queja">Queja</option>
-                    <option value="peticion">Peticion</option>
+                    <option value="Comentario">Comentario</option>
+                    <option value="Queja">Queja</option>
+                    <option value="Peticion">Petición</option>
+                    <option value="Pregunta">Pregunta</option>
                   </select>
                 </div>
 

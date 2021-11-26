@@ -1,12 +1,9 @@
 
 
 import Basket from './Basket';
-import data from './data';
-// import { useState } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 function App() {
   
-  const { products } = data;
 const [cartItems, setCartItems] = useLocalStorage([], "Carro");
   
 
