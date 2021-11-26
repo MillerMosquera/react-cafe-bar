@@ -18,6 +18,7 @@ class ReservaAdmin extends Component {
       nombre: "",
       email: "",
       documento: "",
+      telefono: "",
       servicio: "",
       personas: "",
       fecha: "",
@@ -80,6 +81,7 @@ class ReservaAdmin extends Component {
         nombre: reserva.nombre,
         email: reserva.email,
         documento: reserva.documento,
+        telefono: reserva.telefono,
         servicio: reserva.servicio,
         personas: reserva.personas,
         fecha: reserva.fecha,
@@ -120,6 +122,7 @@ class ReservaAdmin extends Component {
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Documento</th>
+                <th>Telefono</th>
                 <th>Servicio</th>
                 <th>Personas</th>
                 <th>Fecha</th>
@@ -138,6 +141,7 @@ class ReservaAdmin extends Component {
                     <td>{reserva.nombre}</td>
                     <td>{reserva.email}</td>
                     <td>{reserva.documento}</td>
+                    <td>{reserva.telefono}</td>
                     <td>{reserva.servicio}</td>
                     <td>{reserva.personas}</td>
                     <td>{reserva.fecha}</td>
@@ -177,6 +181,10 @@ class ReservaAdmin extends Component {
                 <label htmlFor="documento">Documento</label>
                 <input className="form-control" type="text" name="documento" documento="documento"
                   onChange={this.handleChange} value={form ? form.documento : ''} />
+                <br />
+                <label htmlFor="telefono">Telefono</label>
+                <input className="form-control" type="text" name="telefono" telefono="telefono"
+                  onChange={this.handleChange} value={form ? form.telefono : ''} />
                 <br />
                 <label htmlFor="servicio">Servicio</label>
                 <div className="formulario-select">

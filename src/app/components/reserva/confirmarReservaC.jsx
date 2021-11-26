@@ -2,8 +2,9 @@ import React from "react";
 import "./reserva.css";
 
 import emailjs from 'emailjs-com';
-
 import Swal from "sweetalert2";
+import axios from 'axios';
+
 
 export default function Reserva() {
 
@@ -21,7 +22,7 @@ export default function Reserva() {
     const datosReserva = (<tr id="datosReserva">
         <td>{datos[4]} </td>
         <td>{datos[5]} </td>
-        <td>{datos[6]} </td>
+        <td>{datos[6] + " " + datos[8]} </td>
         <td>{datos[7]} </td>
     </tr>);
 
@@ -88,31 +89,52 @@ function obtenerDatos() {
 
         localStorage.getItem("servicio").replaceAll('"', ''),
         localStorage.getItem("personas").replaceAll('"', ''),
-        (localStorage.getItem("fecha") + " " + localStorage.getItem("hora")).replaceAll('"', ''),
-        localStorage.getItem("indicaciones").replaceAll('"', '')
+        localStorage.getItem("fecha").replaceAll('"', ''),
+        localStorage.getItem("indicaciones").replaceAll('"', ''),
+        localStorage.getItem("hora").replaceAll('"', '')
     ]
 }
 
 
 
 //funcion para enviar correo
-function sendMail() {
+async function sendMail() {
 
     emailjs.init("user_O0lEJgrwrKpZePPdle1VC");
 
     var datos = obtenerDatos();
 
+    var parametrosAPI = {
+        documento: datos[0],
+        nombre: datos[1],
+        telefono: datos[2],
+        email: datos[3],
+
+        servicio: datos[4],
+        personas: datos[5],
+        fecha: datos[6],
+        hora: datos[8],
+        mensaje: datos[7],
+    };
+
+    var url = "https://cafecito-backend.herokuapp.com/api/reserva/"; //url de la api 
+
+    await axios.post(url, parametrosAPI).then(response => {
+        console.log(response);
+    }).catch(error => {
+        console.log(error.message);
+    })
+
     var parametrosCorreo = {
         documentoCliente: datos[0],
-        nombreCliente:  datos[1],
-        telefonoCliente:  datos[2],
-        emailCliente:  datos[3],
+        nombreCliente: datos[1],
+        telefonoCliente: datos[2],
+        emailCliente: datos[3],
 
-        servicio:  datos[4],
-        cantPersonas:  datos[5],
+        servicio: datos[4],
+        cantPersonas: datos[5],
         fechaReserva: datos[6],
         indicaciones: datos[7],
-
     };
 
     emailjs
