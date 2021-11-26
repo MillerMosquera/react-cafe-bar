@@ -15,11 +15,19 @@ import Confcompra from "../components/carrito/confirmarCompra";
 
 import ReservaAdmin from "../components/admin/reserva/reservaAdmin";
 import ServicioAdmin from "../components/admin/servicio/servicioAdmin";
+<<<<<<< HEAD
 import ContactenosAdmin from "../components/admin/contactenos/contactenosAdmin";
+=======
+import NavAdmin from "../components/admin/header/navAdmin";
+import ChefsAdmin from "../components/admin/nosotros/chefsAdmin";
+>>>>>>> a05406617881d15c617df3c3bc7336b54c590010
 
 import Header from "../components/header/headerC";
 import Footer from "../components/footer/footerC";
-import NavAdmin from "../components/admin/header/navAdmin";
+import HistoriaAdmin from "../components/admin/nosotros/historiaAdmin";
+import InformacionAdmin from "../components/admin/nosotros/informacionAdmin";
+import TestimonioAdmin from "../components/admin/nosotros/testimonioAdmin";
+
 
 
 function UserRoutes({ routes }) {
@@ -57,8 +65,23 @@ const routes = [
         exact: true
       },
       {
-        path: "/admin/nosotros",
-        component: ReservaAdmin,//ACA VA SU COMPONENTE
+        path: "/admin/nosotros/empleados",
+        component: ChefsAdmin,//ACA VA SU COMPONENTE
+        exact: true
+      }, 
+      {
+        path: "/admin/nosotros/historia",
+        component: HistoriaAdmin,//ACA VA SU COMPONENTE
+        exact: true
+      },
+      {
+        path: "/admin/nosotros/informacion",
+        component: InformacionAdmin,//ACA VA SU COMPONENTE
+        exact: true
+      },
+      {
+        path: "/admin/nosotros/testimonios",
+        component: TestimonioAdmin,//ACA VA SU COMPONENTE
         exact: true
       },
       {
@@ -81,7 +104,7 @@ const routes = [
         component: ReservaAdmin,
         exact: true
       }
-      
+
     ]
   },
   {

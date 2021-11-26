@@ -1,12 +1,13 @@
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import "./headerAdmin.css";
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 function NavAdmin() {
-    return (
-        <>
+  return (
+    <>
       <div className="navbar">
         <Navbar
           collapseOnSelect
@@ -25,11 +26,15 @@ function NavAdmin() {
                   Inicio
                 </div>
               </Nav.Link>
-              <Nav.Link as={Link} to="/admin/nosotros">
-                <div className="item">
-                  Nosotros
-                </div>
-              </Nav.Link>
+
+              <div className="dropdown">
+                <NavDropdown title="Nosotros" id="basic-nav-dropdown">
+                  <NavDropdown.Item as={Link} to="/admin/nosotros/historia">Historia</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/admin/nosotros/informacion">Info Acerca</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/admin/nosotros/empleados">Chefs</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/admin/nosotros/testimonios">Testimonios</NavDropdown.Item>
+                </NavDropdown>
+              </div>
               <Nav.Link as={Link} to="/admin/menu">
                 <div className="item">
                   Menú
@@ -58,8 +63,8 @@ function NavAdmin() {
 
         </Navbar>
       </div>
-        </>
-    )
+    </>
+  )
 }
 
 export default NavAdmin;
