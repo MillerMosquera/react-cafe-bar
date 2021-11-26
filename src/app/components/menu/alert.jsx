@@ -4,7 +4,9 @@ const alertamsg = () => {
 
     Swal.fire({
         icon: "success",
-        title: "Agregado al carrito",
+        title: "Agregado al carrito",                
+        timer: 1000,
+        showConfirmButton: false,
     });
 };
 

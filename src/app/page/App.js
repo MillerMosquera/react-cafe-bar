@@ -25,6 +25,7 @@ import Footer from "../components/footer/footerC";
 import HistoriaAdmin from "../components/admin/nosotros/historiaAdmin";
 import InformacionAdmin from "../components/admin/nosotros/informacionAdmin";
 import TestimonioAdmin from "../components/admin/nosotros/testimonioAdmin";
+import PedidoAdmin from "../components/admin/pedido/pedidoAdmin";
 
 
 
@@ -58,8 +59,8 @@ const routes = [
     exact: false,
     routes: [
       {
-        path: "/admin/inicio",
-        component: ReservaAdmin,//ACA VA SU COMPONENTE
+        path: "/admin/pedido",
+        component: PedidoAdmin,//ACA VA SU COMPONENTE
         exact: true
       },
       {

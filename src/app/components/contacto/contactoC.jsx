@@ -48,15 +48,19 @@ export default function ContactoC() {
     emailjs.send("email-cafe-bar", "email_comentario", parametrosCorreo).then(
       function () {
         localStorage.clear();
-        window.location.replace("#/");
 
         Swal.fire({
           title: "Comentario realizado...",
           text: "Revisa tu correo para mayor información.",
           icon: "success",
-          timer: 1000,
+          timer: 2800,
           showConfirmButton: false,
         });
+
+        setTimeout(() => {
+          window.location.replace("#/");
+        }, 3500);
+
       },
       function (error) {
         console.log("Error...", error);
@@ -77,7 +81,7 @@ export default function ContactoC() {
         <div className="container">
           <div className="section-title">
             <h2>Contacto</h2>
-            <p>Reserva con nosotros</p>
+            <p>Comunicate con nosotros</p>
           </div>
         </div>
 

@@ -77,7 +77,7 @@ function usePagination() {
   const recarga = ()=>{
     setTimeout(() => {
       window.location.reload(false);
-    }, 1500);
+    }, 1000);
   }
   
   const handlePageClick = (e) => {

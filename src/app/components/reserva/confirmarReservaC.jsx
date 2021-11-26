@@ -142,23 +142,27 @@ async function sendMail() {
         .then(function () {
 
             localStorage.clear();
-            window.location.replace("#/servicios");
 
             Swal.fire({
                 title: 'Reserva realizada...',
                 text: 'Revisa tu correo para mayor información.',
                 icon: 'success',
-                timer: 1000,
+                timer: 2800,
                 showConfirmButton: false,
 
             });
+
+            setTimeout(() => {
+                window.location.replace("#/servicios");
+            }, 3500);
+
         }, function (error) {
             console.log('Error...', error);
             Swal.fire({
                 title: 'Reserva fallida...',
                 text: 'Se genero in error al realizar la reserva, intenta de nuevo.',
                 icon: 'error',
-                timer: 1000,
+                timer: 2800,
                 showConfirmButton: false,
 
             });

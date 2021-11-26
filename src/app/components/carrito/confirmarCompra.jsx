@@ -139,7 +139,7 @@ function mapearPedido(datosJSON) {
         "Precio (Unidad): " + item.precio +
         "<br>" +
         "Precio (Parcial): " + (item.precio * item.qty) +
-        "<br>" 
+        "<br>"
     ));
 }
 
@@ -152,7 +152,7 @@ function sendMail() {
 
     var datos = obtenerDatos();
 
-    var parametrosCorreo = {
+    var parametrosPedido = {
         nombreCliente: datos[0],
         telefonoCliente: datos[1],
         emailCliente: datos[2],
@@ -162,20 +162,23 @@ function sendMail() {
     };
 
     emailjs
-        .send('email-cafe-bar', 'email_pedidos', parametrosCorreo)
+        .send('email-cafe-bar', 'email_pedidos', parametrosPedido)
         .then(function () {
 
             localStorage.clear();
-            window.location.replace("#/menu");
 
             Swal.fire({
                 title: 'Factura realizada...',
                 text: 'Revisa tu correo para mayor información.',
                 icon: 'success',
-                timer: 1000,
+                timer: 2800,
                 showConfirmButton: false,
 
             });
+
+            setTimeout(() => {
+                window.location.replace("#/menu");
+            }, 3500);
         }, function (error) {
             console.log('Error...', error);
             Swal.fire({

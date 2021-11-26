@@ -21,12 +21,6 @@ function NavAdmin() {
             <Nav className="me-auto items" >
 
 
-              <Nav.Link as={Link} to="/admin/inicio">
-                <div className="item">
-                  Inicio
-                </div>
-              </Nav.Link>
-
               <div className="dropdown">
                 <NavDropdown title="Nosotros" id="basic-nav-dropdown">
                   <NavDropdown.Item as={Link} to="/admin/nosotros/historia">Historia</NavDropdown.Item>
@@ -56,7 +50,11 @@ function NavAdmin() {
                   Reservas
                 </div>
               </Nav.Link>
-
+              <Nav.Link as={Link} to="/admin/pedido">
+                <div className="item">
+                  Pedidos
+                </div>
+              </Nav.Link>
             </Nav>
 
           </Navbar.Collapse>
