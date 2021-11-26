@@ -1,7 +1,7 @@
 import React from "react";
 
 import emailjs from 'emailjs-com';
-
+import axios from 'axios';
 import Swal from "sweetalert2";
 
 export default function Reserva() {
@@ -146,11 +146,32 @@ function mapearPedido(datosJSON) {
 
 
 //funcion para enviar correo
-function sendMail() {
+async function sendMail() {
 
     emailjs.init("user_O0lEJgrwrKpZePPdle1VC");
 
     var datos = obtenerDatos();
+
+    var parametrosAPI = {
+        nombreCliente: datos[0],
+        telefonoCliente: datos[1],
+        emailCliente: datos[2],
+        indicaciones: datos[3],
+        productosCompra: (mapearPedido(datos[4])).toString().replaceAll('<br>', '\n'),
+        valorCompra: datos[5],
+        estado: "Pendiente"
+    };
+
+
+    var url = "https://cafecito-backend.herokuapp.com/api/pedido/"; //url de la api 
+
+    console.log(parametrosAPI)
+
+    axios.post(url, parametrosAPI).then(response => {
+        console.log(response);
+    }).catch(error => {
+        console.log(error.message);
+    })
 
     var parametrosPedido = {
         nombreCliente: datos[0],
@@ -159,8 +180,8 @@ function sendMail() {
         indicaciones: datos[3],
         productosCompra: mapearPedido(datos[4]),
         valorCompra: datos[5],
+        estado: "Pendiente"
     };
-
     emailjs
         .send('email-cafe-bar', 'email_pedidos', parametrosPedido)
         .then(function () {
