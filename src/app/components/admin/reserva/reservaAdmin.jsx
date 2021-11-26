@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "../admin.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
-import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const url = "https://cafecito-backend.herokuapp.com/api/reserva/"; //url de la api 
@@ -23,6 +23,7 @@ class ReservaAdmin extends Component {
       personas: "",
       fecha: "",
       mensaje: "",
+      estado: "",
       hora: "",
       tipoModal: "",
     }
@@ -86,7 +87,8 @@ class ReservaAdmin extends Component {
         personas: reserva.personas,
         fecha: reserva.fecha,
         hora: reserva.hora,
-        mensaje: reserva.mensaje
+        mensaje: reserva.mensaje,
+        estado: reserva.estado
       }
     })
   }
@@ -128,6 +130,7 @@ class ReservaAdmin extends Component {
                 <th>Fecha</th>
                 <th>Hora</th>
                 <th>Indicaciones</th>
+                <th>Estado</th>
                 <th>Acciones</th>
 
               </tr>
@@ -138,15 +141,16 @@ class ReservaAdmin extends Component {
                 return (
                   <tr key={reserva.id}>
                     <td>{reserva.id}</td>
-                    <td>{reserva.nombre}</td>
-                    <td>{reserva.email}</td>
-                    <td>{reserva.documento}</td>
-                    <td>{reserva.telefono}</td>
-                    <td>{reserva.servicio}</td>
+                    <td>{reserva.nombre.slice(0, 10)}...</td>
+                    <td>{reserva.email.slice(0, 7)}...</td>
+                    <td>{reserva.documento.slice(0, 10)}...</td>
+                    <td>{reserva.telefono.slice(0, 7)}...</td>
+                    <td>{reserva.servicio.slice(0, 7)}...</td>
                     <td>{reserva.personas}</td>
                     <td>{reserva.fecha}</td>
                     <td>{reserva.hora}</td>
                     <td>{reserva.mensaje}</td>
+                    <td>{reserva.estado}</td>
                     <td>
                       <button className="btn btn-primary" onClick={() => { this.seleccionReserva(reserva); this.modalInsertar() }}><i className="bi bi-pencil-fill"></i></button>
                       {"   "}
@@ -161,9 +165,6 @@ class ReservaAdmin extends Component {
 
           {/* modal para editar los campos */}
           <Modal isOpen={this.state.modalInsertar} className="modal-bg">
-            <ModalHeader style={{ display: 'block' }}>
-              <span style={{ float: 'right' }}>x</span>
-            </ModalHeader>
             <ModalBody>
               <div className="form-group">
                 <label htmlFor="id">ID</label>
@@ -215,6 +216,17 @@ class ReservaAdmin extends Component {
                 <label htmlFor="mensaje">Indicaciones</label>
                 <textarea rows="2" maxLength="150" name="mensaje" mensaje="mensaje"
                   onChange={this.handleChange} value={form ? form.mensaje : ''} ></textarea>
+                <br />
+                <label htmlFor="estado">Estado</label>
+                <div className="formulario-select">
+                  <select className="formulario__select" aria-label=".form-select-sm example" name="estado" id="estado"
+                    required value={form ? form.estado : 'Pendiente'} onChange={this.handleChange}>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En proceso">En proceso</option>
+                    <option value="Cancelado">Cancelado</option>
+                    <option value="Terminado">Terminado</option>
+                  </select>
+                </div>
                 <br />
               </div>
             </ModalBody>

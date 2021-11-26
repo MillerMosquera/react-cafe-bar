@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "../admin.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
-import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const url = "https://cafecito-backend.herokuapp.com/api/nosotros/historia/"; //url de la api 
@@ -124,9 +124,6 @@ class HistoriaAdmin extends Component {
 
           {/* modal para editar los campos */}
           <Modal isOpen={this.state.modalInsertar} className="modal-bg">
-            <ModalHeader style={{ display: 'block' }}>
-              <span style={{ float: 'right' }}>x</span>
-            </ModalHeader>
             <ModalBody>
               <div className="form-group">
                 <label htmlFor="id">ID</label>
