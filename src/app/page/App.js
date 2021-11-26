@@ -15,6 +15,7 @@ import Confcompra from "../components/carrito/confirmarCompra";
 
 import ReservaAdmin from "../components/admin/reserva/reservaAdmin";
 import ServicioAdmin from "../components/admin/servicio/servicioAdmin";
+import ContactenosAdmin from "../components/admin/contactenos/contactenosAdmin";
 
 import Header from "../components/header/headerC";
 import Footer from "../components/footer/footerC";
@@ -72,7 +73,7 @@ const routes = [
       },
       {
         path: "/admin/mensaje",
-        component: ReservaAdmin,//ACA VA SU COMPONENTE
+        component: ContactenosAdmin,//ACA VA SU COMPONENTE
         exact: true
       },
       {
