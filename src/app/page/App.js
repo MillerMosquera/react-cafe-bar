@@ -18,6 +18,7 @@ import ServicioAdmin from "../components/admin/servicio/servicioAdmin";
 import ContactenosAdmin from "../components/admin/contactenos/contactenosAdmin";
 import NavAdmin from "../components/admin/header/navAdmin";
 import ChefsAdmin from "../components/admin/nosotros/chefsAdmin";
+import PlatosAdmin from "../components/admin/platos/platosAdmin";
 
 import Header from "../components/header/headerC";
 import Footer from "../components/footer/footerC";
@@ -83,7 +84,7 @@ const routes = [
       },
       {
         path: "/admin/menu",
-        component: ReservaAdmin,//ACA VA SU COMPONENTE
+        component: PlatosAdmin,
         exact: true
       },
       {
