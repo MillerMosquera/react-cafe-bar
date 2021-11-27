@@ -172,24 +172,24 @@ class ReservaAdmin extends Component {
                   onChange={this.handleChange} value={form ? form.id : 'Auto-Generado'} />
                 <br />
                 <label htmlFor="nombre">Nombre</label>
-                <input className="form-control" type="text" name="nombre" nombre="nombre"
+                <input className="form-control" type="text" name="nombre" nombre="nombre" readOnly
                   onChange={this.handleChange} value={form ? form.nombre : ''} />
                 <br />
                 <label htmlFor="email">Correo Electronico</label>
-                <input className="form-control" type="email" name="email" email="email"
+                <input className="form-control" type="email" name="email" email="email" readOnly
                   onChange={this.handleChange} value={form ? form.email : ''} />
                 <br />
                 <label htmlFor="documento">Documento</label>
-                <input className="form-control" type="text" name="documento" documento="documento"
+                <input className="form-control" type="text" name="documento" documento="documento" readOnly
                   onChange={this.handleChange} value={form ? form.documento : ''} />
                 <br />
                 <label htmlFor="telefono">Telefono</label>
-                <input className="form-control" type="text" name="telefono" telefono="telefono"
+                <input className="form-control" type="text" name="telefono" telefono="telefono" readOnly
                   onChange={this.handleChange} value={form ? form.telefono : ''} />
                 <br />
                 <label htmlFor="servicio">Servicio</label>
                 <div className="formulario-select">
-                  <select className="formulario__select" aria-label=".form-select-sm example" name="servicio" id="servicio"
+                  <select className="formulario__select" aria-label=".form-select-sm example" name="servicio" id="servicio" readOnly
                     required value={form ? form.servicio : ''} onChange={this.handleChange}>
                     <option value="" selected disabled >Servicios</option>
                     <option value="Cumpleaños">Cumpleaños</option>
@@ -202,19 +202,19 @@ class ReservaAdmin extends Component {
                 </div>
                 <br />
                 <label htmlFor="personas">Personas</label>
-                <input className="form-control" type="number" name="personas" personas="personas"
+                <input className="form-control" type="number" name="personas" personas="personas" readOnly
                   onChange={this.handleChange} value={form ? form.personas : ''} />
                 <br />
                 <label htmlFor="fecha">Fecha</label>
-                <input className="form-control" type="date" name="fecha" fecha="fecha"
+                <input className="form-control" type="date" name="fecha" fecha="fecha" readOnly
                   onChange={this.handleChange} value={form ? form.fecha : ''} />
                 <br />
                 <label htmlFor="hora">Hora</label>
-                <input className="form-control" type="time" name="hora" hora="hora"
+                <input className="form-control" type="time" name="hora" hora="hora" readOnly
                   onChange={this.handleChange} value={form ? form.hora : ''} />
                 <br />
                 <label htmlFor="mensaje">Indicaciones</label>
-                <textarea rows="2" maxLength="150" name="mensaje" mensaje="mensaje"
+                <textarea rows="2" maxLength="150" name="mensaje" mensaje="mensaje" readOnly
                   onChange={this.handleChange} value={form ? form.mensaje : ''} ></textarea>
                 <br />
                 <label htmlFor="estado">Estado</label>
@@ -254,12 +254,12 @@ class ReservaAdmin extends Component {
             </ModalFooter>
           </Modal>
         </div>
-        <div className="bt-insertar">
+        {/* <div className="bt-insertar">
           <button className="btn btn-success bt-add"
             onClick={() => { this.setState({ form: null, tipoModal: 'insertar' }); this.modalInsertar() }}>
             <i className="bi bi-plus icon-add"></i>
           </button>
-        </div>
+        </div> */}
       </div>
     );
   }

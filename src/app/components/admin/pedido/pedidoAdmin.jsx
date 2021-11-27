@@ -160,27 +160,27 @@ class PedidoAdmin extends Component {
                   onChange={this.handleChange} value={form ? form.id : 'Auto-Generado'} />
                 <br />
                 <label htmlFor="nombreCliente">Nombre</label>
-                <input className="form-control" type="text" name="nombreCliente" nombreCliente="nombreCliente"
+                <input className="form-control" type="text" name="nombreCliente" nombreCliente="nombreCliente" readOnly
                   onChange={this.handleChange} value={form ? form.nombreCliente : ''} />
                 <br />
                 <label htmlFor="telefonoCliente">Telefono</label>
-                <input className="form-control" type="telefonoCliente" name="telefonoCliente" telefonoCliente="telefonoCliente"
+                <input className="form-control" type="telefonoCliente" name="telefonoCliente" telefonoCliente="telefonoCliente" readOnly
                   onChange={this.handleChange} value={form ? form.telefonoCliente : ''} />
                 <br />
                 <label htmlFor="emailCliente">emailCliente</label>
-                <input className="form-control" type="text" name="emailCliente" emailCliente="emailCliente"
+                <input className="form-control" type="text" name="emailCliente" emailCliente="emailCliente" readOnly
                   onChange={this.handleChange} value={form ? form.emailCliente : ''} />
                 <br />
                 <label htmlFor="valorCompra">valorCompra</label>
-                <input className="form-control" type="number" name="valorCompra" valorCompra="valorCompra"
+                <input className="form-control" type="number" name="valorCompra" valorCompra="valorCompra" readOnly
                   onChange={this.handleChange} value={form ? form.valorCompra : ''} />
                 <br />
                 <label htmlFor="indicaciones">Indicaciones</label>
-                <textarea rows="2" maxLength="245" name="indicaciones" indicaciones="indicaciones"
+                <textarea rows="2" maxLength="245" name="indicaciones" indicaciones="indicaciones" readOnly
                   onChange={this.handleChange} value={form ? form.indicaciones : ''} ></textarea>
                 <br />
                 <label htmlFor="productosCompra">Productos</label>
-                <textarea rows="2" name="productosCompra" productosCompra="productosCompra"
+                <textarea rows="2" name="productosCompra" productosCompra="productosCompra" readOnly
                   onChange={this.handleChange} value={form ? form.productosCompra : ''} ></textarea>
                 <br />
                 <label htmlFor="estado">Estado</label>
@@ -220,12 +220,12 @@ class PedidoAdmin extends Component {
             </ModalFooter>
           </Modal>
         </div>
-        <div className="bt-insertar">
+        {/* <div className="bt-insertar">
           <button className="btn btn-success bt-add"
             onClick={() => { this.setState({ form: null, tipoModal: 'insertar' }); this.modalInsertar() }}>
             <i className="bi bi-plus icon-add"></i>
           </button>
-        </div>
+        </div> */}
       </div>
     );
   }
