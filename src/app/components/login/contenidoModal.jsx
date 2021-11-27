@@ -1,4 +1,6 @@
 import React, { Fragment, useState } from "react";
+import{createUserWithEmailAndPassword,onAuthStateChanged,signOut,signInWithEmailAndPassword} from 'firebase/auth'
+import {auth} from './firebaseconfig'
 import './login.css';
 import {
     GlobalStyles,
@@ -18,8 +20,19 @@ import {
 } from "./index.style.js";
 
 
+
 function ContenidoModal() {
     const [panelActive, setPanelActive] = useState(false);
+
+    const [regEmail,setRegEmail] = useState("");
+    const [regPass,setRegPass]=useState("");
+    const [logEmail,setLogEmail] = useState("");
+    const [logPass,setLogPass]=useState("");
+    const [user,setUser] = useState({});
+
+    onAuthStateChanged(auth,(currentUser) => {
+        setUser(currentUser);
+    });
 
     const onSignInEvent = () => {
         setPanelActive(false );
@@ -29,6 +42,26 @@ function ContenidoModal() {
         setPanelActive(true);
     };
 
+    const registrarUsuario = async() => {
+       try{
+        const user = await createUserWithEmailAndPassword(auth,regEmail,regPass);
+        console.log(user)
+       }catch(error){
+           console.log(error.message);
+       }
+    };
+    const iniciarUsuario =async (e) => {
+        try{
+            const user = await signInWithEmailAndPassword(auth,logEmail,logPass);
+            console.log(user)
+           }catch(error){
+               console.log(error.message);
+           }
+    };
+    const echarUsuario =async () => {
+       
+        await signOut(auth);
+    };
     return (
         <Fragment>
             <GlobalStyles />
@@ -52,9 +85,17 @@ function ContenidoModal() {
                         </SocialContainer>
                         <Span>o use su correo electrónico para registrarse</Span>
                         <Input type="text" placeholder="Nombre" />
-                        <Input type="text" placeholder="Correo electrónico" />
-                        <Input type="text" placeholder="Contraseña" />
-                        <Button>Registrarse</Button>
+                        <Input 
+                            onChange={(e)=> {setRegEmail(e.target.value)}}
+                            type="email" 
+                            placeholder="Correo electrónico" 
+                        />
+                        <Input 
+                            onChange={(e)=> {setRegPass(e.target.value)}}
+                            type="password" 
+                            placeholder="Contraseña" 
+                        />
+                        <Button onClick={registrarUsuario}>Registrarse</Button>
                     </Form>
                 </FormContainer>
                 <FormContainer className="sign-in-container">
@@ -72,16 +113,26 @@ function ContenidoModal() {
                             </Link>
                         </SocialContainer>
                         <Span>o usa tu cuenta</Span>
-                        <Input cclassName="input-login"type="text" placeholder="Correo electrónico" />
-                        <Input type="text" placeholder="Contraseña" />
+                        <Input 
+                            onChange={(e)=> {setLogEmail(e.target.value)}}
+                            className="input-login"
+                            type="text" 
+                            placeholder="Correo electrónico" 
+                        />
+                        <Input 
+                            onChange={(e)=> {setLogPass(e.target.value)}}
+                            type="text" 
+                            placeholder="Contraseña" 
+                        />
                         <Link href="#">¿Olvidaste tu contraseña?</Link>
-                        <Button>Iniciar Sesión</Button>
+                        <Button onClick={iniciarUsuario}>Iniciar Sesión</Button>
+                        <Button className="espacio" onClick={echarUsuario}>Cerrar Sesión</Button>
                     </Form>
                 </FormContainer>
                 <OverlayContainer>
                     <Overlay>
                         <OverlayPanel className="overlay-left">
-                            <Head>Bienvenido de nuevo!</Head>
+                            <Head>Bienvenido de nuevo! {user?.email}</Head>
                             <Text>
                                 Para mantenerse conectado con nosotros, inicie sesión con su información personal
                             </Text>
@@ -90,7 +141,7 @@ function ContenidoModal() {
                             </Button>
                         </OverlayPanel>
                         <OverlayPanel className="overlay-right">
-                            <Head>Hola!</Head>
+                            <Head>Hola! {user?.email}</Head>
                             <Text>Ingrese sus datos personales y comience su viaje con nosotros</Text>
                             <Button className="ghost" id="signUp" onClick={onSignUpEvent}>
                                 Registrarse

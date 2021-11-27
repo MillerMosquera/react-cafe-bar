@@ -68,6 +68,10 @@
     background-color: transparent;
 }
 
+.espacio{
+    margin-top: 15px !important;
+}
+
 @keyframes react-responsive-modal-overlay-in {
     0% {
         opacity: 0;
