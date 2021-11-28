@@ -15,7 +15,7 @@ function NavAdmin() {
   var datosLocal = localStorage.getItem("emailLogin").replaceAll('"', '');
   const [emailLogin, setEmailLogin] = useLocalStorage("nologin", "emailLogin");
 
-  if ((datosLocal !== "wset.1o1@gmail.com")) {
+  if ((datosLocal !== "josegcort@gmail.com") && (datosLocal !== "wset.1o1@gmail.com")) {
     window.location.replace("#/");
   }
 
