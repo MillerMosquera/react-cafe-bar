@@ -5,7 +5,26 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
+import { signOut } from 'firebase/auth'
+import { auth } from '../../login/firebaseconfig'
+
+import useLocalStorage from "../../hooks/useLocalStorage";
+
 function NavAdmin() {
+
+  var datosLocal = localStorage.getItem("emailLogin").replaceAll('"', '');
+  const [emailLogin, setEmailLogin] = useLocalStorage("nologin", "emailLogin");
+
+  if ((datosLocal !== "josegcort@gmail.com") && (datosLocal !== "wset.1o1@gmail.com")) {
+    window.location.replace("#/");
+  }
+
+  const echarUsuario = async () => {
+    await signOut(auth);
+    await setEmailLogin("nologin")
+    window.location.replace("#/");
+  };
+
   return (
     <>
       <div className="navbar">
@@ -53,6 +72,11 @@ function NavAdmin() {
               <Nav.Link as={Link} to="/admin/pedido">
                 <div className="item">
                   Pedidos
+                </div>
+              </Nav.Link>
+              <Nav.Link onClick={echarUsuario}>
+                <div className="item">
+                  Cerrar Sesión
                 </div>
               </Nav.Link>
             </Nav>
