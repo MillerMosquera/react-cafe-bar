@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./footer.css";
 
 export default function footer() {
@@ -40,23 +42,49 @@ export default function footer() {
                         <div className="col-lg-2 col-md-6 footer-links">
                             <h4>Navegación</h4>
                             <ul>
-                                <li><i className="bx bx-chevron-right"></i> <a href="index.html">Inicio</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="Nosotros.html">Nosotros</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="Menu.html">Menu</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="Servicios.html">Servicios</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="contactenos.html">Contacto</a></li>
+                                <li>
+                                    <i className="bx bx-chevron-right"></i>
+                                    <Link to="/">Inicio</Link>
+                                </li>
+                                <li>
+                                    <i className="bx bx-chevron-right"></i>
+                                    <Link to="/nosotros">Nosotros</Link>
+                                </li>
+                                <li>
+                                    <i className="bx bx-chevron-right"></i>
+                                    <Link to="/menu">Menu</Link>
+                                </li>
+                                <li>
+                                    <i className="bx bx-chevron-right"></i>
+                                    <Link to="/servicios">Servicios</Link>
+                                </li>
+                                <li><i className="bx bx-chevron-right"></i>
+                                    <Link to="/contacto">Contacto</Link>
+                                </li>
                             </ul>
                         </div>
 
                         <div className="col-lg-3 col-md-6 footer-links">
                             <h4>Servicios</h4>
                             <ul>
-                                <li><i className="bx bx-chevron-right"></i> <a href="Servicios.html/#cumple">Celebración de cumpleaños</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="Servicios.html/#aniversario">Aniversarios</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="Servicios.html/#infantil">Fiestas infantiles</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="Servicios.html/#propuestas">Declaraciones o propuestas</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="Servicios.html/#despedidas">Despedidas</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="Servicios.html/#cena">Cena con amigos</a></li>
+                                <li><i className="bx bx-chevron-right"></i>
+                                    <Link to="/servicios">Celebración de cumpleaños</Link>
+                                </li>
+                                <li><i className="bx bx-chevron-right"></i>
+                                    <Link to="/servicios">Aniversarios</Link>
+                                </li>
+                                <li><i className="bx bx-chevron-right"></i>
+                                    <Link to="/servicios">Fiestas infantiles</Link>
+                                </li>
+                                <li><i className="bx bx-chevron-right"></i>
+                                    <Link to="/servicios">Declaraciones o propuestas</Link>
+                                </li>
+                                <li><i className="bx bx-chevron-right"></i>
+                                    <Link to="/servicios">Despedidas</Link>
+                                </li>
+                                <li><i className="bx bx-chevron-right"></i>
+                                    <Link to="/servicios">Cena con amigos</Link>
+                                </li>
                             </ul>
                         </div>
 
